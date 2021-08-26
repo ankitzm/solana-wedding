@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Certificate from './component/certificate/Certificate';
+import Homepage from './component/homepage/Homepage';
 
 function App() {
   return (
     <div className="App">
-      hello
+      <Homepage />
+      {/* <Certificate /> */}
     </div>
   );
 }
