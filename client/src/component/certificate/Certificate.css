@@ -1,0 +1,104 @@
+.certificate-container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(
+		135deg,
+		hsla(158, 100%, 50%, 1) 0%,
+		hsla(291, 100%, 56%, 1) 100%
+	);
+	background: -moz-linear-gradient(
+		135deg,
+		hsla(158, 100%, 50%, 1) 0%,
+		hsla(291, 100%, 56%, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		135deg,
+		hsla(158, 100%, 50%, 1) 0%,
+		hsla(291, 100%, 56%, 1) 100%
+	);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FFA3", endColorstr="#DC1FFF", GradientType=1 );
+}
+
+.form-container {
+	display: flex;
+	height: 70vh;
+	width: 98vw;
+}
+
+.form {
+	width: 50%;
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#form {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	height: 60vh;
+	background: rgba(255, 255, 255, 0.493);
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+	#form {
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
+}
+
+input {
+	background-color: rgba(0, 0, 0, 0.795);
+	background-blend-mode: difference;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	margin: 10px;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+button {
+  margin-top: 30px;
+	background-color: #0060ba;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 16px;
+}
+
+#downloadWrapper {
+	width: 50%;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#certificateWrapper {
+	box-shadow: 0 0 5px #000;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+#certificateWrapper img {
+	display: block;
+	height: 450px;
+	width: auto;
+}
+
+#certificateWrapper p {
+	margin: 0;
+	position: absolute;
+	left: 90px;
+	top: 130px;
+	font-size: 20pt;
+}
