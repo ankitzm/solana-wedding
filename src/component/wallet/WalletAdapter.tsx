@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import React, { useEffect, useMemo, useState } from 'react';
-import './WalletAdapter.css';
-import Wallet from '../../dist/cjs/index';
+import React, { useEffect, useMemo, useState } from "react";
+import "./WalletAdapter.css";
+import Wallet from "../../dist/cjs/index";
 import {
   Connection,
   SystemProgram,
@@ -12,13 +12,13 @@ import {
   Keypair,
   TransactionInstruction,
   sendAndConfirmTransaction,
-} from '@solana/web3.js';
-import * as borsh from 'borsh';
+} from "@solana/web3.js";
+import * as borsh from "borsh";
 
 function toHex(buffer: Buffer) {
   return Array.prototype.map
-    .call(buffer, (x: number) => ('00' + x.toString(16)).slice(-2))
-    .join('');
+    .call(buffer, (x: number) => ("00" + x.toString(16)).slice(-2))
+    .join("");
 }
 
 function WalletAdapter(): React.ReactElement {
@@ -27,18 +27,18 @@ function WalletAdapter(): React.ReactElement {
     setLogs((logs) => [...logs, log]);
   }
 
-  const network = clusterApiUrl('devnet');
-  const [providerUrl, setProviderUrl] = useState('https://www.sollet.io');
+  const network = clusterApiUrl("devnet");
+  const [providerUrl, setProviderUrl] = useState("https://www.sollet.io");
   const connection = useMemo(() => new Connection(network), [network]);
   const urlWallet = useMemo(
     () => new Wallet(providerUrl, network),
-    [providerUrl, network],
+    [providerUrl, network]
   );
   const injectedWallet = useMemo(() => {
     try {
       return new Wallet(
         (window as unknown as { solana: unknown }).solana,
-        network,
+        network
       );
     } catch (e) {
       console.log(`Could not create injected wallet`, e);
@@ -51,15 +51,15 @@ function WalletAdapter(): React.ReactElement {
   const [, setConnected] = useState(false);
   useEffect(() => {
     if (selectedWallet) {
-      selectedWallet.on('connect', () => {
+      selectedWallet.on("connect", () => {
         setConnected(true);
         addLog(
-          `Connected to wallet ${selectedWallet.publicKey?.toBase58() ?? '--'}`,
+          `Connected to wallet ${selectedWallet.publicKey?.toBase58() ?? "--"}`
         );
       });
-      selectedWallet.on('disconnect', () => {
+      selectedWallet.on("disconnect", () => {
         setConnected(false);
-        addLog('Disconnected from wallet');
+        addLog("Disconnected from wallet");
       });
       void selectedWallet.connect();
       return () => {
@@ -69,7 +69,7 @@ function WalletAdapter(): React.ReactElement {
   }, [selectedWallet]);
 
   class GreetingAccount {
-    txt = '';
+    txt = "";
     constructor(fields: { txt: string } | undefined = undefined) {
       if (fields) {
         this.txt = fields.txt;
@@ -77,24 +77,24 @@ function WalletAdapter(): React.ReactElement {
     }
   }
   const GreetingSchema = new Map([
-    [GreetingAccount, { kind: 'struct', fields: [['txt', 'String']] }],
+    [GreetingAccount, { kind: "struct", fields: [["txt", "String"]] }],
   ]);
   const sampleGreeter = new GreetingAccount();
-  sampleGreeter.txt = '0'.repeat(100);
+  sampleGreeter.txt = "0".repeat(200);
   const GREETING_SIZE = borsh.serialize(GreetingSchema, sampleGreeter).length;
 
   let greetedPubkey: PublicKey;
 
   const programID = new PublicKey(
-    '81MbSQG6DaoCuvqgCCzWYXP5AWUanxyFvsTodSH8vh9A',
+    "81MbSQG6DaoCuvqgCCzWYXP5AWUanxyFvsTodSH8vh9A"
   );
-  const GREETING_SEED = 'hello';
+  const GREETING_SEED = "hello";
 
   async function sendTransaction() {
     try {
       const pubkey = selectedWallet?.publicKey;
       if (!pubkey || !selectedWallet) {
-        throw new Error('wallet not connected');
+        throw new Error("wallet not connected");
       }
       // console.log(pubkey);
       const newAccount = new Keypair();
@@ -102,7 +102,7 @@ function WalletAdapter(): React.ReactElement {
       console.log(greetedPubkey.toBase58());
 
       const lamports = await connection.getMinimumBalanceForRentExemption(
-        GREETING_SIZE,
+        GREETING_SIZE
       );
 
       const instruction = new TransactionInstruction(
@@ -112,7 +112,7 @@ function WalletAdapter(): React.ReactElement {
           lamports: lamports,
           space: GREETING_SIZE,
           programId: programID,
-        }),
+        })
       );
 
       const transaction = new Transaction().add(instruction);
@@ -120,9 +120,9 @@ function WalletAdapter(): React.ReactElement {
       ////////////////////////////////
 
       /////////////////////////////////
-      const husband = 'Chandler';
-      const wife = 'Monica';
-      const date = '2020-02-01';
+      const husband = "Chandler";
+      const wife = "Monica";
+      const date = "2020-02-01";
 
       const allData = {
         husband: husband,
@@ -130,11 +130,11 @@ function WalletAdapter(): React.ReactElement {
         date: date,
       };
       let msg = JSON.stringify(allData);
-      if (msg.length > 100) {
-        throw new Error('Message must be less than 30 characters');
+      if (msg.length > 200) {
+        throw new Error("Message must be less than 30 characters");
       }
-      if (msg.length < 100) {
-        msg = msg + '*'.repeat(100 - msg.length);
+      if (msg.length < 200) {
+        msg = msg + "*".repeat(200 - msg.length);
       }
 
       const messageAccount = new GreetingAccount();
@@ -147,22 +147,22 @@ function WalletAdapter(): React.ReactElement {
       transaction.add(sending_Data);
 
       ////////////////////////////////
-      addLog('Getting recent blockhash');
+      addLog("Getting recent blockhash");
       transaction.recentBlockhash = (
         await connection.getRecentBlockhash()
       ).blockhash;
-      addLog('Sending signature request to wallet');
+      addLog("Sending signature request to wallet");
       transaction.feePayer = pubkey;
       const signed = await selectedWallet.signTransaction(transaction);
       transaction.partialSign(newAccount);
-      addLog('Got signature, submitting transaction');
+      addLog("Got signature, submitting transaction");
       const signature = await connection.sendRawTransaction(signed.serialize());
-      addLog('Submitted transaction ' + signature + ', awaiting confirmation');
-      await connection.confirmTransaction(signature, 'singleGossip');
-      addLog('Transaction ' + signature + ' confirmed');
+      addLog("Submitted transaction " + signature + ", awaiting confirmation");
+      await connection.confirmTransaction(signature, "singleGossip");
+      addLog("Transaction " + signature + " confirmed");
       const balance = await connection.getBalance(greetedPubkey);
       // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
-      addLog('Balance currently: ' + balance);
+      addLog("Balance currently: " + balance);
       ////////////////////////////////
       // const transaction2 = new Transaction().add(sending_Data);
       // addLog('Getting recent blockhash');
@@ -186,7 +186,7 @@ function WalletAdapter(): React.ReactElement {
       // // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
       // addLog('Balance currently: ' + balance2);
 
-      console.log('Done!!');
+      console.log("Done!!");
     } catch (e) {
       console.warn(e);
       addLog(`Error: ${(e as Error).message}`);
@@ -196,14 +196,14 @@ function WalletAdapter(): React.ReactElement {
   async function signMessage() {
     try {
       if (!selectedWallet) {
-        throw new Error('wallet not connected');
+        throw new Error("wallet not connected");
       }
       const message =
-        'Please sign this message for proof of address ownership.';
-      addLog('Sending message signature request to wallet');
+        "Please sign this message for proof of address ownership.";
+      addLog("Sending message signature request to wallet");
       const data = new TextEncoder().encode(message);
-      const signed = await selectedWallet.sign(data, 'hex');
-      addLog('Got signature: ' + toHex(signed.signature));
+      const signed = await selectedWallet.sign(data, "hex");
+      addLog("Got signature: " + toHex(signed.signature));
     } catch (e) {
       console.warn(e);
       addLog(`Error: ${(e as Error).message}`);
@@ -215,7 +215,7 @@ function WalletAdapter(): React.ReactElement {
       <h1>Wallet Adapter Demo</h1>
       <div>Network: {network}</div>
       <div>
-        Waller provider:{' '}
+        Waller provider:{" "}
         <input
           type="text"
           value={providerUrl}
