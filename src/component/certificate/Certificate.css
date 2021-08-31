@@ -1,5 +1,6 @@
 .certificate-container {
-	height: 100vh;
+	margin-top: 100px;
+	padding: 50px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -24,7 +25,7 @@
 
 .form-container {
 	display: flex;
-	height: 70vh;
+	height: auto;
 	width: 98vw;
 }
 
@@ -44,7 +45,6 @@
 	justify-content: center;
 	border-radius: 20px;
 	height: 60vh;
-	background: rgba(255, 255, 255, 0.493);
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -66,7 +66,7 @@ input {
 }
 
 button {
-  margin-top: 30px;
+	margin-top: 30px;
 	background-color: #0060ba;
 	border: none;
 	color: white;
@@ -91,7 +91,7 @@ button {
 }
 #certificateWrapper img {
 	display: block;
-	height: 450px;
+	height: 400px;
 	width: auto;
 }
 
@@ -101,4 +101,21 @@ button {
 	left: 90px;
 	top: 130px;
 	font-size: 20pt;
+}
+
+@media screen and (max-width: 1025px) {
+	.form-container {
+		flex-direction: column;
+		height: fit-content;
+	}
+	
+	.form,
+	#downloadWrapper {
+		width: 100%;
+	}
+
+	#certificateWrapper img {
+		width: 70vw;
+		height: auto;
+	}
 }
