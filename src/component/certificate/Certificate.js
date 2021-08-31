@@ -63,6 +63,7 @@ const Certificate = ({ sendDataToParent }) => {
                                     html2CanvasOptions: { backgroundColor: null }
                                 });
                             }}
+                            type="light"
                             text="download"
                         />
 

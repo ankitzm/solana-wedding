@@ -212,7 +212,7 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
         </div>
       ) : (
         <div>
-          <CoreBTN onClick={() => setSelectedWallet(urlWallet)} text="Connect to Wallet" type={undefined} id={undefined} />
+          <CoreBTN onClick={() => setSelectedWallet(urlWallet)} text="Connect to Wallet" type="light" id={undefined} />
           
           {/* <button onClick={() => setSelectedWallet(injectedWallet)}>
             Connect to Injected Wallet
