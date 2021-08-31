@@ -1,0 +1,19 @@
+{
+    "wallet" : [
+        {
+            "name" : "Sollet",
+            "url" : "https://www.sollet.io/",
+            "logo" : ""
+        },
+        {
+            "name" : "Solfire",
+            "url" : "https://solflare.com/",
+            "logo" : ""
+        },
+        {
+            "name" : "Phantom",
+            "url" : "https://phantom.app/",
+            "logo" : ""
+        }
+    ]
+}
