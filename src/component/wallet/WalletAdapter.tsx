@@ -21,9 +21,7 @@ function toHex(buffer: Buffer) {
     .join("");
 }
 
-function WalletAdapter( {Data} : {Data:any} ): React.ReactElement {
-  console.log(Data);
-  
+function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
   const [logs, setLogs] = useState<string[]>([]);
   function addLog(log: string) {
     setLogs((logs) => [...logs, log]);
@@ -78,11 +76,15 @@ function WalletAdapter( {Data} : {Data:any} ): React.ReactElement {
       }
     }
   }
+  const completeData = JSON.stringify(Data);
+  const transactionLength = completeData.length;
+  console.log(completeData.length);
+
   const GreetingSchema = new Map([
     [GreetingAccount, { kind: "struct", fields: [["txt", "String"]] }],
   ]);
   const sampleGreeter = new GreetingAccount();
-  sampleGreeter.txt = "0".repeat(200);
+  sampleGreeter.txt = "0".repeat(transactionLength);
   const GREETING_SIZE = borsh.serialize(GreetingSchema, sampleGreeter).length;
 
   let greetedPubkey: PublicKey;
@@ -122,9 +124,9 @@ function WalletAdapter( {Data} : {Data:any} ): React.ReactElement {
       ////////////////////////////////
 
       /////////////////////////////////
-      const husband = "Chandler";
-      const wife = "Monica";
-      const date = "2020-02-01";
+      const husband = Data.Husband;
+      const wife = Data.Wife;
+      const date = Data.Date;
 
       const allData = {
         husband: husband,
@@ -132,12 +134,12 @@ function WalletAdapter( {Data} : {Data:any} ): React.ReactElement {
         date: date,
       };
       let msg = JSON.stringify(allData);
-      if (msg.length > 200) {
-        throw new Error("Message must be less than 30 characters");
-      }
-      if (msg.length < 200) {
-        msg = msg + "*".repeat(200 - msg.length);
-      }
+      // if (msg.length > 200) {
+      //   throw new Error("Message must be less than 30 characters");
+      // }
+      // if (msg.length < 200) {
+      //   msg = msg + "*".repeat(200 - msg.length);
+      // }
 
       const messageAccount = new GreetingAccount();
       messageAccount.txt = msg;
