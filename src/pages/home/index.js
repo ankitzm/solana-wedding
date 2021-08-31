@@ -4,7 +4,7 @@ import Explorer from '../../component/explorer/Explorer'
 import Landing from '../../component/Landing/Landing';
 
 
-function index() {
+function Home() {
     return (
         <div>
             <Landing />
@@ -14,4 +14,4 @@ function index() {
     )
 }
 
-export default index;
+export default Home;
