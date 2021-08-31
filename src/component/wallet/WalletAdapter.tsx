@@ -34,17 +34,17 @@ function WalletAdapter(): React.ReactElement {
     () => new Wallet(providerUrl, network),
     [providerUrl, network]
   );
-  const injectedWallet = useMemo(() => {
-    try {
-      return new Wallet(
-        (window as unknown as { solana: unknown }).solana,
-        network
-      );
-    } catch (e) {
-      console.log(`Could not create injected wallet`, e);
-      return null;
-    }
-  }, [network]);
+  // const injectedWallet = useMemo(() => {
+  //   try {
+  //     return new Wallet(
+  //       (window as unknown as { solana: unknown }).solana,
+  //       network
+  //     );
+  //   } catch (e) {
+  //     console.log(`Could not create injected wallet`, e);
+  //     return null;
+  //   }
+  // }, [network]);
   const [selectedWallet, setSelectedWallet] = useState<
     Wallet | undefined | null
   >(undefined);
@@ -236,9 +236,9 @@ function WalletAdapter(): React.ReactElement {
           <button onClick={() => setSelectedWallet(urlWallet)}>
             Connect to Wallet
           </button>
-          <button onClick={() => setSelectedWallet(injectedWallet)}>
+          {/* <button onClick={() => setSelectedWallet(injectedWallet)}>
             Connect to Injected Wallet
-          </button>
+          </button> */}
         </div>
       )}
       <hr />
