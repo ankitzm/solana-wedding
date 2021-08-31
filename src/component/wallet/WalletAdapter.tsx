@@ -14,12 +14,7 @@ import {
   // sendAndConfirmTransaction,
 } from "@solana/web3.js";
 import * as borsh from "borsh";
-
-function toHex(buffer: Buffer) {
-  return Array.prototype.map
-    .call(buffer, (x: number) => ("00" + x.toString(16)).slice(-2))
-    .join("");
-}
+import CoreBTN from "../../core/btn/btn";
 
 function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
   const [logs, setLogs] = useState<string[]>([]);
@@ -197,23 +192,6 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
     }
   }
 
-  async function signMessage() {
-    try {
-      if (!selectedWallet) {
-        throw new Error("wallet not connected");
-      }
-      const message =
-        "Please sign this message for proof of address ownership.";
-      addLog("Sending message signature request to wallet");
-      const data = new TextEncoder().encode(message);
-      const signed = await selectedWallet.sign(data, "hex");
-      addLog("Got signature: " + toHex(signed.signature));
-    } catch (e) {
-      console.warn(e);
-      addLog(`Error: ${(e as Error).message}`);
-    }
-  }
-
   return (
     <div className="WalletAdapter">
       <h1>Wallet Adapter Demo</h1>
@@ -229,17 +207,13 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
       {selectedWallet && selectedWallet.connected ? (
         <div>
           <div>Wallet address: {selectedWallet.publicKey?.toBase58()}.</div>
-          <button onClick={sendTransaction}>Send Transaction</button>
-          <button onClick={signMessage}>Sign Message</button>
-          <button onClick={() => selectedWallet.disconnect()}>
-            Disconnect
-          </button>
+          <CoreBTN onClick={sendTransaction} text="Send Transaction" type="light" id={undefined} />
+          <CoreBTN onClick={() => selectedWallet.disconnect()} text="Disconnect" type="light" id={undefined} />
         </div>
       ) : (
         <div>
-          <button onClick={() => setSelectedWallet(urlWallet)}>
-            Connect to Wallet
-          </button>
+          <CoreBTN onClick={() => setSelectedWallet(urlWallet)} text="Connect to Wallet" type={undefined} id={undefined} />
+          
           {/* <button onClick={() => setSelectedWallet(injectedWallet)}>
             Connect to Injected Wallet
           </button> */}

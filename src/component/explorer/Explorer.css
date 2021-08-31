@@ -59,8 +59,7 @@
 	white-space: pre-line;
 }
 
-input,
-button {
+input {
 	background-color: rgba(0, 0, 0, 0.795);
 	color: white;
 	border: none;
@@ -74,10 +73,6 @@ button {
 .cert-pdf {
 	height: 300px;
 	width: 400px;
-}
-
-button {
-	cursor: pointer;
 }
 
 @media screen and (max-width: 860px) {
@@ -101,8 +96,7 @@ button {
 		font-size: 16px;
 	}
 
-	input,
-	button {
+	input {
 		font-size: 14px;
 		margin: 1px;
 	}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { exportComponentAsJPEG } from "react-component-export-image";
+import CoreBTN from "../../core/btn/btn";
 import "./Certificate.css"
 
 const Certificate = ({ sendDataToParent }) => {
@@ -46,25 +47,24 @@ const Certificate = ({ sendDataToParent }) => {
                             }
                         />
 
-                        <button
+                        <CoreBTN
                             onClick={(e) => {
                                 e.preventDefault();
                                 sendDataToParent(Data)
                             }}
-                        >
-                            send data for transaction
-                        </button>
+                            text="send data"
+                            type="light"
+                            />
 
-                        <button
+                        <CoreBTN
                             onClick={(e) => {
                                 e.preventDefault();
                                 exportComponentAsJPEG(this.certificateWrapper, {
                                     html2CanvasOptions: { backgroundColor: null }
                                 });
                             }}
-                        >
-                            Download
-                        </button>
+                            text="download"
+                        />
 
                     </form>
                 </div>

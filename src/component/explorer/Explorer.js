@@ -1,6 +1,7 @@
 import { React, useState } from 'react'
 import "./Explorer.css"
 import Get from './callAPI'
+import CoreBTN from '../../core/btn/btn'
 
 function Explorer() {
     const [title, setTitle] = useState('')
@@ -8,9 +9,14 @@ function Explorer() {
     return (
         <div className="explorer">
             <input type="text" onChange={event => setTitle(event.target.value)} placeholder="Transaction ID" />
-            <button type="button" onClick={e => (
-                Get(title)
-            )} id="toggle" value="Message Print">Get Data</button>
+            <CoreBTN
+                id="toggle"
+                onClick={e => (
+                    Get(title)
+                )}
+                text="Get Data"
+                type="dark"
+            />
 
             <div id="temp">
                 Search your transaction ID above
@@ -21,9 +27,9 @@ function Explorer() {
 
                 <div className="formatted">
                     <strong>The Transaction ID has been verified !!</strong> <br /><br />
-                        Husband Name &nbsp;:  <p id="husband"></p><br />
-                        Wife Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  <p id="wife"></p><br />
-                        Wedding Date &nbsp;&nbsp;&nbsp;:  <p id="date"></p> <br />
+                    Husband Name &nbsp;:  <p id="husband"></p><br />
+                    Wife Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  <p id="wife"></p><br />
+                    Wedding Date &nbsp;&nbsp;&nbsp;:  <p id="date"></p> <br />
                 </div>
 
                 <div className="cert-pdf">
