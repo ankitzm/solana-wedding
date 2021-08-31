@@ -54,18 +54,8 @@ const Certificate = ({ sendDataToParent }) => {
                             }}
                             text="send data"
                             type="light"
-                            />
-
-                        <CoreBTN
-                            onClick={(e) => {
-                                e.preventDefault();
-                                exportComponentAsJPEG(this.certificateWrapper, {
-                                    html2CanvasOptions: { backgroundColor: null }
-                                });
-                            }}
-                            type="light"
-                            text="download"
                         />
+
 
                     </form>
                 </div>
@@ -77,6 +67,16 @@ const Certificate = ({ sendDataToParent }) => {
 
                         {/* image is in ration 4:3 */}
                         <img src="https://ankitzm.co/template/template3.jpg" alt="Certificate" />
+                        <CoreBTN
+                            onClick={(e) => {
+                                e.preventDefault();
+                                exportComponentAsJPEG(this.certificateWrapper, {
+                                    html2CanvasOptions: { backgroundColor: null }
+                                });
+                            }}
+                            type="light"
+                            text="download"
+                        />
                     </div>
                 </div>
             </div>
