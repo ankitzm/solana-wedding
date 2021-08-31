@@ -58,7 +58,7 @@ function GetData(signature) {
     fetch("https://api.devnet.solana.com/", requestOptions)
         .then((response) => response.json())
         .then(data => {
-            var main = data.result.meta.logMessages[2];
+            var main = data.result.meta.logMessages[4];
 
             // remove unnessasary text and trimmed important data to JSON
             var mainJSON = JSON.parse(main.substring(main.indexOf("{"), main.indexOf("}") + 1));
