@@ -28,7 +28,7 @@ function Explorer() {
 
                 <div className="cert-pdf">
                     <embed src="http://ankitzm.co/template/template3.jpg" type="application/pdf" frameBorder="0"
-                        scrolling="none" height="300px" width="400px"></embed>
+                        scrolling="none" height="100%" width="100%"></embed>
                 </div>
             </div>
         </div>

@@ -1,0 +1,60 @@
+.home {
+	padding: 10vh 0vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90vh;
+	min-height: 600px;
+}
+
+.leaf {
+	width: 130px;
+}
+
+.heading {
+	margin: 0px 50px;
+	text-align: center;
+	font-size: 60px;
+	font-family: "Rampart One", cursive;
+}
+
+.sub-heading {
+	font-size: 20px;
+}
+
+.solana-logo {
+	width: 400px;
+}
+
+/* adding responsiveness  */
+
+@media screen and (max-width: 1025px) {
+	.leaf {
+		width: 100px;
+	}
+
+	.heading {
+		margin: 0px 10px;
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.leaf {
+		width: 80px;
+	}
+
+	.heading {
+		margin: 0px 10px;
+		font-size: 35px;
+	}
+
+	.solana-logo {
+		width: 200px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.leaf {
+		display: none;
+	}
+}

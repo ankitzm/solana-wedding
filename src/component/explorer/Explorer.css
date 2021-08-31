@@ -1,63 +1,109 @@
 .explorer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    min-height: 600px;
-    padding: 15vh 0vh;
-    margin-bottom: 20vh;
-    background: linear-gradient(135deg, hsla(158, 100%, 50%, 1) 0%, hsla(291, 100%, 56%, 1) 100%);
-    background: -moz-linear-gradient(135deg, hsla(158, 100%, 50%, 1) 0%, hsla(291, 100%, 56%, 1) 100%);
-    background: -webkit-linear-gradient(135deg, hsla(158, 100%, 50%, 1) 0%, hsla(291, 100%, 56%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FFA3", endColorstr="#DC1FFF", GradientType=1 );
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	min-height: 600px;
+	padding: 15vh 0vh;
+	margin-bottom: 20vh;
+	background: linear-gradient(
+		135deg,
+		hsla(158, 100%, 50%, 1) 0%,
+		hsla(291, 100%, 56%, 1) 100%
+	);
+	background: -moz-linear-gradient(
+		135deg,
+		hsla(158, 100%, 50%, 1) 0%,
+		hsla(291, 100%, 56%, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		135deg,
+		hsla(158, 100%, 50%, 1) 0%,
+		hsla(291, 100%, 56%, 1) 100%
+	);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FFA3", endColorstr="#DC1FFF", GradientType=1 );
 
-    /* slanted background */
-    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
-    clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
+	/* slanted background */
+	-webkit-clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
+	clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
 }
 
 .explorer p {
-    display: inline;
+	display: inline;
 }
 
-#temp, .recieved{
-    margin-top: 30px;
-    font-size: 20px;
-    color: black;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#temp,
+.recieved {
+	font-size: 20px;
+	margin-top: 30px;
+	color: black;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 #temp {
-    margin-top: 60px;
-    font-weight: bold;
+	margin-top: 60px;
+	font-weight: bold;
 }
 
 .recieved p {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .formatted {
-    text-align: left;
-    
-    white-space: pre-line;
+	text-align: left;
+	white-space: pre-line;
 }
 
-input, button {
-    background-color: rgba(0, 0, 0, 0.795);
-    color: white;
-    border: none;
-    padding:10px 15px;
-    margin: 10px;
-    border-radius: 10px;
-    font-size: 18px;
-    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.425);
-  }
+input,
+button {
+	background-color: rgba(0, 0, 0, 0.795);
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	margin: 10px;
+	border-radius: 10px;
+	font-size: 18px;
+	box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.425);
+}
+
+.cert-pdf {
+	height: 300px;
+	width: 400px;
+}
 
 button {
-    cursor: pointer;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 860px) {
+	.recieved {
+		flex-direction: column;
+	}
+
+	.cert-pdf {
+		margin-top: 50px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.cert-pdf {
+		height: auto;
+		width: 80%;
+	}
+
+	#temp,
+	.recieved {
+		font-size: 16px;
+	}
+
+	input,
+	button {
+		font-size: 14px;
+		margin: 1px;
+	}
 }

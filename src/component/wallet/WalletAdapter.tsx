@@ -11,7 +11,7 @@ import {
   clusterApiUrl,
   Keypair,
   TransactionInstruction,
-  sendAndConfirmTransaction,
+  // sendAndConfirmTransaction,
 } from "@solana/web3.js";
 import * as borsh from "borsh";
 
@@ -88,7 +88,7 @@ function WalletAdapter(): React.ReactElement {
   const programID = new PublicKey(
     "81MbSQG6DaoCuvqgCCzWYXP5AWUanxyFvsTodSH8vh9A"
   );
-  const GREETING_SEED = "hello";
+  // const GREETING_SEED = "hello";
 
   async function sendTransaction() {
     try {

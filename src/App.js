@@ -1,14 +1,17 @@
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
-import Certificate from './component/certificate/Certificate';
-import Homepage from './component/homepage/Homepage';
-import WalletAdapter from './component/wallet/WalletAdapter';
+import Home from './pages/home';
+import CertificatePage from './pages/certificatePage';
 
 function App() {
   return (
     <div className="App">
-      <WalletAdapter />
-      {/* <Homepage /> */}
-      {/* <Certificate /> */}
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/certificate" component={CertificatePage} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
