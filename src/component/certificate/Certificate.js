@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { exportComponentAsJPEG } from "react-component-export-image";
 import "./Certificate.css"
 
-const Certificate = ({sendDataToParent}) => {
+const Certificate = ({ sendDataToParent }) => {
     const certificateWrapper = React.createRef();
 
     const [Husband, setHusband] = useState("")
@@ -10,9 +10,9 @@ const Certificate = ({sendDataToParent}) => {
     const [Date, setDate] = useState("")
 
     const Data = {
-        Husband: { Husband },
-        Wife: { Wife },
-        Date: { Date }
+        Husband: Husband,
+        Wife: Wife,
+        Date: Date
     }
 
     return (

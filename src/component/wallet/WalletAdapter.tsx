@@ -21,7 +21,9 @@ function toHex(buffer: Buffer) {
     .join("");
 }
 
-function WalletAdapter(): React.ReactElement {
+function WalletAdapter( {Data} : {Data:any} ): React.ReactElement {
+  console.log(Data);
+  
   const [logs, setLogs] = useState<string[]>([]);
   function addLog(log: string) {
     setLogs((logs) => [...logs, log]);

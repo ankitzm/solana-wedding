@@ -3,7 +3,7 @@ import Certificate from '../../component/certificate/Certificate'
 import WalletAdapter from '../../component/wallet/WalletAdapter'
 
 const CertificatePage = () => {
-    const [Data, setData] = useState("")
+    const [Data, setData] = useState(null)
 
     const sendDataToParent = (recievedData) => { // the callback. Use a better name
         setData(recievedData);
@@ -12,7 +12,7 @@ const CertificatePage = () => {
     console.log(Data); // checking
     return (
         <div>
-            <WalletAdapter />
+            <WalletAdapter Data={Data} />
             <Certificate sendDataToParent={sendDataToParent} />
         </div>
     )
