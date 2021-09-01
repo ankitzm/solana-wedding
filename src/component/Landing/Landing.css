@@ -26,6 +26,22 @@
 	width: 400px;
 }
 
+::-webkit-scrollbar{
+	width: 25px;
+}
+::-webkit-scrollbar-track{
+	border: 7px solid #232943;
+	box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb{
+	background: linear-gradient(
+		45deg,
+		#06dee1,
+		#79ff6c
+	);
+	border-radius: 3px;
+}
+
 /* adding responsiveness  */
 
 @media screen and (max-width: 1025px) {
