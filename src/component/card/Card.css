@@ -3,12 +3,11 @@
 	padding: 40px;
 	height: 500px;
 	display: flex;
-	justify-content: center;
-
+	justify-content: center;z
 }
 
 .card {
-	height: 450px;
+	height: auto;
 	width: 300px;
 	border-radius: 20px;
 	background-color: rgba(0, 0, 0, 0.63);

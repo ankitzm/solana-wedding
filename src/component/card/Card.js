@@ -7,9 +7,6 @@ function Card() {
         <div className="card-container">
             <div className="card">
                 <div className="title">WEDDING REGISTRY</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quia beatae explicabo cumque voluptatem
-                    accusamus adipisci maxime unde voluptatibus. Dolorum aperiam illo delectus quisquam quod hic saepe.
-                    Aliquam, ab impedit?</p>
 
                 <Link to="/certificate"><CoreBTN text="Click here" type="light" /> </Link>
             </div>

@@ -6,28 +6,31 @@
 	width: 100%;
 	height: auto;
 	min-height: 600px;
-	padding: 15vh 0vh;
+	padding: 5vh 0vw;
 	margin-bottom: 20vh;
-	background: linear-gradient(
-		135deg,
-		hsla(158, 100%, 50%, 1) 0%,
-		hsla(291, 100%, 56%, 1) 100%
-	);
-	background: -moz-linear-gradient(
-		135deg,
-		hsla(158, 100%, 50%, 1) 0%,
-		hsla(291, 100%, 56%, 1) 100%
-	);
-	background: -webkit-linear-gradient(
-		135deg,
-		hsla(158, 100%, 50%, 1) 0%,
-		hsla(291, 100%, 56%, 1) 100%
-	);
-	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FFA3", endColorstr="#DC1FFF", GradientType=1 );
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	box-shadow: inset 120px 0px rgba(0, 0, 0, 0.363),
+		inset 80px 0px rgba(0, 0, 0, 0.363), 
+		inset 50px 0px rgba(0, 0, 0, 0.358),
+		inset -120px 0px rgba(0, 0, 0, 0.363),
+		inset -80px 0px rgba(0, 0, 0, 0.363),
+		inset -50px 0px rgba(0, 0, 0, 0.358),
+		inset 0px 12px 10px rgba(0, 0, 0, 0.458),
+		inset 0px -12px 10px rgba(0, 0, 0, 0.458);
+}
 
-	/* slanted background */
-	-webkit-clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
-	clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .explorer p {
