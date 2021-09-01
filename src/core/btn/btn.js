@@ -5,13 +5,13 @@ function CoreBTN({ type, text, onClick, id }) {
         {/* <button id={id} onClick={onClick} className={`btn ${type}`}>
             {text}
         </button> */ 
-        <a id={id} onClick={onClick} className={`btn ${type}`}>
+        <button id={id} onClick={onClick} className={`btn ${type}`}>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             {text}
-        </a>
+        </button>
         }</>
     )
 }

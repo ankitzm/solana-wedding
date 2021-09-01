@@ -1,10 +1,13 @@
-/* .btn {
+.btn {
+	position: relative;
 	border: none;
 	padding: 10px 15px;
 	margin: 10px;
 	border-radius: 10px;
 	font-size: 18px;
     cursor: pointer;
+	overflow: hidden;
+	transition: 0.2s;
 }
 
 .dark {
@@ -27,11 +30,9 @@
 .light:hover {
     transition: 0.1s all;
     box-shadow: 0 0 15px 1px rgba(45, 213, 255, 0.719);
-} */
+}
 
-
-a{
-	position: relative;
+/* .btn {
     display: inline-block;
 	padding: 8px 15px;
     color: #000;
@@ -39,39 +40,34 @@ a{
 	text-decoration: none;
 	font-size: 24px;
 	background-color: transparent;
-	overflow: hidden;
-	transition: 0.2s;
-}
+} */
 
-a span{
+.btn span{
 	position: absolute;
 	display: block;
 }
 
-a span:nth-child(1){
+.btn span:nth-child(1){
 	top: 0;
 	left: -100%;
 	width: 100%;
 	height: 2px;
 	background: linear-gradient(90deg,transparent,#DC1FFF)
 }
-a:hover span:nth-child(1){
+.btn:hover span:nth-child(1){
 	left: 100%;
 	transition: 1s;
 }
 
-a span:nth-child(3){
+.btn span:nth-child(3){
 	bottom: 0;
 	right: -100%;
 	width: 100%;
 	height: 2px;
 	background: linear-gradient(270deg,transparent,#DC1FFF)
 }
-a:hover span:nth-child(3){
+.btn:hover span:nth-child(3){
 	right: 100%;
 	transition: 1s;
 	transition-delay:0.05s;
 }
-
-
-
