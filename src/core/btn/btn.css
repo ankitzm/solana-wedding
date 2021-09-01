@@ -33,10 +33,9 @@
 a{
 	position: relative;
     display: inline-block;
-	padding: 15px 30px;
+	padding: 8px 15px;
     color: #000;
-	text-transform: uppercase;
-	letter-spacing: 4px;
+	letter-spacing: 3px;
 	text-decoration: none;
 	font-size: 24px;
 	background-color: transparent;
