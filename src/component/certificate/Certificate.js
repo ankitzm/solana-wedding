@@ -22,7 +22,7 @@ const Certificate = ({ sendDataToParent }) => {
             <div className="form-container">
                 <div className="form">
 
-                    <form id="form" onSubmit="return false;">
+                    <form id="form">
                         <input
                             type="text"
                             placeholder="Husband's Name"
