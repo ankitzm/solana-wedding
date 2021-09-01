@@ -5,7 +5,7 @@ function Landing() {
     return (
         <div className="home">
             <img src={LeftLeaf} alt="left-leaf" className="leaf" data-aos="fade-left" />
-            <div className="heading" data-aos="zoom-in-up">
+            <div className="heading">
                 <img className="solana-logo" src={SolanaLogo} alt="" /> <br />
                 WEDDING
                 <p className="sub-heading">we connects</p>
