@@ -9,3 +9,15 @@
 .logs {
   word-break: break-all;
 }
+
+select, option {
+  background-color: rgba(0, 207, 180, 0.795);
+  width: 200px;
+	color: rgb(34, 34, 34);
+	border: none;
+	padding: 10px 15px;
+	margin: 10px;
+	border-radius: 10px;
+	font-size: 18px;
+	box-shadow: 0 0 10px 1px rgba(255, 106, 106, 0.425);
+}

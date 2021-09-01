@@ -49,8 +49,7 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 			selectedWallet.on("connect", () => {
 				setConnected(true)
 				addLog(
-					`Connected to wallet ${
-						selectedWallet.publicKey?.toBase58() ?? "--"
+					`Connected to wallet ${selectedWallet.publicKey?.toBase58() ?? "--"
 					}`,
 				)
 			})
@@ -206,15 +205,16 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 
 	return (
 		<div className="WalletAdapter">
-			<h1>Wallet Adapter Demo</h1>
-			<div>Network: {network}</div>
+			<h1>Register Your Marriage on Solana Blockchan</h1>
+			{/* <div>Network: {network}</div> */}
 			<div>
-				Waller provider:{" "}
-				<input
-					type="text"
-					value={providerUrl}
-					onChange={e => setProviderUrl(e.target.value.trim())}
-				/>
+				Select Wallet : <br />
+
+				<select onChange={e => setProviderUrl(e.target.value)}>
+					<option value="https://solflare.com/">Sollet</option>
+					<option value="https://phantom.app/">Phantom</option>
+					<option value="https://solflare.com/">Solflare</option>
+				</select>
 			</div>
 			{selectedWallet && selectedWallet.connected ? (
 				<div>
