@@ -1,4 +1,4 @@
-.btn {
+/* .btn {
 	border: none;
 	padding: 10px 15px;
 	margin: 10px;
@@ -27,4 +27,52 @@
 .light:hover {
     transition: 0.1s all;
     box-shadow: 0 0 15px 1px rgba(45, 213, 255, 0.719);
+} */
+
+
+a{
+	position: relative;
+    display: inline-block;
+	padding: 15px 30px;
+    color: #000;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-decoration: none;
+	font-size: 24px;
+	background-color: transparent;
+	overflow: hidden;
+	transition: 0.2s;
 }
+
+a span{
+	position: absolute;
+	display: block;
+}
+
+a span:nth-child(1){
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,#DC1FFF)
+}
+a:hover span:nth-child(1){
+	left: 100%;
+	transition: 1s;
+}
+
+a span:nth-child(3){
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,#DC1FFF)
+}
+a:hover span:nth-child(3){
+	right: 100%;
+	transition: 1s;
+	transition-delay:0.05s;
+}
+
+
+
