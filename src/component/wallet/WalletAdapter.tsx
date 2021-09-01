@@ -63,6 +63,7 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 		}
 	}, [selectedWallet]);
 
+	let images;
 	class GreetingAccount {
 		txt = '';
 		constructor(fields: { txt: string } | undefined = undefined) {
@@ -103,16 +104,16 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 			const lamports = await connection.getMinimumBalanceForRentExemption(
 				GREETING_SIZE
 			);
-			const checkbalance = await connection.getBalance(greetedPubkey);
-			if (checkbalance < lamports) {
-				const data = await fetch(
-					'https://meme-api.herokuapp.com/gimme/wholesomememes',
-					{
-						method: 'GET',
-					}
-				)
-					.then((res) => res.json())
-					.then((res) => <img src={res.preview[5]} alt="image"></img>);
+			const checkbalance = await connection.getBalance(pubkey);
+			if (checkbalance >= lamports) {
+				var requestOptions = {
+					method: 'GET',
+					redirect: 'follow',
+				};
+				fetch('https://meme-api.herokuapp.com/gimme/memes')
+					.then((response) => response.json())
+					.then((result) => (images = result.preview[0]))
+					.catch((error) => console.log('error', error));
 			} else {
 				throw new Error('Not enough lamports');
 			}
@@ -222,6 +223,7 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 
 	return (
 		<div className="WalletAdapter">
+			<img src={images} />
 			<h1>Register Your Marriage on Solana Blockchan</h1>
 			{/* <div>Network: {network}</div> */}
 			<div>
