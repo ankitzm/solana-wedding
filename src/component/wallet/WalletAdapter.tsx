@@ -146,17 +146,17 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
       transaction.add(sending_Data);
 
       ////////////////////////////////
-      addLog("Getting recent blockhash");
+      // addLog("Getting recent blockhash");
       transaction.recentBlockhash = (
         await connection.getRecentBlockhash()
       ).blockhash;
-      addLog("Sending signature request to wallet");
+      // addLog("Sending signature request to wallet");
       transaction.feePayer = pubkey;
       const signed = await selectedWallet.signTransaction(transaction);
       transaction.partialSign(newAccount);
-      addLog("Got signature, submitting transaction");
+      // addLog("Got signature, submitting transaction");
       const signature = await connection.sendRawTransaction(signed.serialize());
-      addLog("Submitted transaction " + signature + ", awaiting confirmation");
+      // addLog("Submitted transaction " + signature + ", awaiting confirmation");
       await connection.confirmTransaction(signature, "singleGossip");
       addLog("Transaction " + signature + " confirmed");
       const balance = await connection.getBalance(greetedPubkey);
@@ -188,7 +188,7 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
       console.log("Done!!");
     } catch (e) {
       console.warn(e);
-      addLog(`Error: ${(e as Error).message}`);
+      alert(`Error: ${(e as Error).message}`);
     }
   }
 
