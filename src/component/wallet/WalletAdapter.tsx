@@ -248,7 +248,7 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
           </button> */}
 				</div>
 			)}
-			<hr />
+
 			<div className="logs">
 				{logs.map((log, i) => (
 					<div key={i}>{log}</div>
