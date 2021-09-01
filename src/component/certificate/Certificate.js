@@ -70,7 +70,7 @@ const Certificate = ({ sendDataToParent }) => {
                         <CoreBTN
                             onClick={(e) => {
                                 e.preventDefault();
-                                exportComponentAsJPEG(this.certificateWrapper, {
+                                exportComponentAsJPEG(certificateWrapper, {
                                     html2CanvasOptions: { backgroundColor: null }
                                 });
                             }}

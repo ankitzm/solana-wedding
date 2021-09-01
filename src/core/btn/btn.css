@@ -3,7 +3,7 @@
 	border: none;
 	padding: 10px 15px;
 	margin: 10px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	font-size: 18px;
     cursor: pointer;
 	overflow: hidden;
@@ -13,23 +13,23 @@
 .dark {
     background-color: rgb(34, 34, 34);
     color: white;
-    box-shadow: 0 0 10px 1px rgb(0, 114, 143);
+    /* box-shadow: 0 0 10px 1px rgb(0, 114, 143); */
 }
 
 .dark:hover {
     transition: 0.1s all;
-    box-shadow: 0 0 15px 1px rgb(0, 114, 143);
+    /* box-shadow: 0 0 15px 1px rgb(0, 114, 143); */
 }
 
 .light {
     background-color: rgb(0, 193, 219);
     color: rgba(0, 0, 0, 0.925);
-    box-shadow: 0 0 10px 1px rgba(45, 213, 255, 0.719);
+    /* box-shadow: 0 0 10px 1px rgba(45, 213, 255, 0.719); */
 }
 
 .light:hover {
     transition: 0.1s all;
-    box-shadow: 0 0 15px 1px rgba(45, 213, 255, 0.719);
+    /* box-shadow: 0 0 15px 1px rgba(45, 213, 255, 0.719); */
 }
 
 /* .btn {

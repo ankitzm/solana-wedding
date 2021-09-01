@@ -211,7 +211,7 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 				Select Wallet : <br />
 
 				<select onChange={e => setProviderUrl(e.target.value)}>
-					<option value="https://solflare.com/">Sollet</option>
+					<option value="https://sollet.io/">Sollet</option>
 					<option value="https://phantom.app/">Phantom</option>
 					<option value="https://solflare.com/">Solflare</option>
 				</select>
