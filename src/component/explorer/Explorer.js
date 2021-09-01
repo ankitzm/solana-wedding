@@ -6,7 +6,6 @@ import CoreBTN from '../../core/btn/btn'
 function Explorer() {
     const [search, setSearch] = useState('')
     const [mainJSON, setMainJSON] = useState(null)
-    console.log(mainJSON);
     
     return (
         <div className="explorer">
@@ -27,6 +26,7 @@ function Explorer() {
             {/* show recieved data */}
             <div id="recieved-data" className="recieved">
                 <div className="cert-pdf">
+                    {mainJSON}
                     <embed src="http://ankitzm.co/template/template3.jpg" type="application/pdf" frameBorder="0"
                         scrolling="none" height="100%" width="100%"></embed>
                 </div>
