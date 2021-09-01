@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CoreBTN from "../../core/btn/btn";
 import "./Card.css"
 
 function Card() {
@@ -10,7 +11,7 @@ function Card() {
                     accusamus adipisci maxime unde voluptatibus. Dolorum aperiam illo delectus quisquam quod hic saepe.
                     Aliquam, ab impedit?</p>
 
-                <Link to="/certificate"> click here </Link>
+                <Link to="/certificate"><CoreBTN text="Click here" type="light" /> </Link>
             </div>
         </div>
     )
