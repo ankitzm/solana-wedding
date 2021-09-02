@@ -245,16 +245,16 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 				{selectedWallet && selectedWallet.connected ? (
 					<div>
 						<CoreBTN
-							onClick={sendTransaction}
-							text="Send Transaction"
+							onClick={() => selectedWallet.disconnect()}
+							text="Disconnect Wallet"
 							type="light"
 							id={undefined}
 						/>
 						<CoreBTN
-							onClick={() => selectedWallet.disconnect()}
-							text="Disconnect"
+							onClick={sendTransaction}
+							text="Send Transaction"
 							type="light"
-							id={undefined}
+							id="send-btn"
 						/>
 					</div>
 				) : (
