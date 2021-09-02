@@ -19,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:program-rust": "cargo build-bpf --manifest-path=./program-rust/Cargo.toml"
   },
   "eslintConfig": {
     "extends": [
