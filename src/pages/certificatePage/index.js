@@ -14,7 +14,7 @@ const CertificatePage = () => {
     console.log(Data); // checking
     return (
         <div>
-            <Link class="home-btn" to="/">
+            <Link className="home-btn" to="/">
             <img src="https://img.icons8.com/glyph-neue/38/262626/home.png" alt="home" />
             </Link>
             <WalletAdapter Data={Data} />
