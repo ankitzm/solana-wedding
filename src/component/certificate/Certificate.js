@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { exportComponentAsJPEG } from "react-component-export-image";
+import { exportComponentAsPNG } from "react-component-export-image";
 import CoreBTN from "../../core/btn/btn";
 import "./Certificate.css"
+import Cert from "./../../assets/cert.png"
 
 const Certificate = ({ sendDataToParent }) => {
     const certificateWrapper = React.createRef();
@@ -17,70 +18,71 @@ const Certificate = ({ sendDataToParent }) => {
     }
 
     return (
+        <div>
         <div className="certificate-container">
+            <div className="form">
 
-            <div className="form-container">
-                <div className="form">
+                <form id="form">
+                    <input
+                        type="text"
+                        placeholder="Husband's Name"
+                        value={Husband}
+                        onChange={(e) =>
+                            setHusband(e.target.value)
+                        }
+                    />
+                    <input
+                        type="text"
+                        placeholder="Wife's Name"
+                        value={Wife}
+                        onChange={(e) =>
+                            setWife(e.target.value)
+                        }
+                    />
+                    <input
+                        type="date"
+                        value={Date}
+                        onChange={(e) =>
+                            setDate(e.target.value)
+                        }
+                    />
 
-                    <form id="form">
-                        <input
-                            type="text"
-                            placeholder="Husband's Name"
-                            value={Husband}
-                            onChange={(e) =>
-                                setHusband(e.target.value)
-                            }
-                        />
-                        <input
-                            type="text"
-                            placeholder="Wife's Name"
-                            value={Wife}
-                            onChange={(e) =>
-                                setWife(e.target.value)
-                            }
-                        />
-                        <input
-                            type="date"
-                            value={Date}
-                            onChange={(e) =>
-                                setDate(e.target.value)
-                            }
-                        />
+                    <CoreBTN
+                        onClick={(e) => {
+                            e.preventDefault();
+                            sendDataToParent(Data)
+                        }}
+                        text="Confirm Data"
+                        type="light"
+                    />
+                    <span className="sub-text"> Click Send Transaction to complete your Transaction </span>
 
-                        <CoreBTN
-                            onClick={(e) => {
-                                e.preventDefault();
-                                sendDataToParent(Data)
-                            }}
-                            text="Confirm Data"
-                            type="light"
-                        />
-                        <span className="sub-text"> Click Send Transaction to complete your Transaction </span>
-
-                    </form>
-                </div>
+                </form>
+            </div>
 
 
-                <div id="downloadWrapper" ref={certificateWrapper}>
-                    <div id="certificateWrapper">
-                        <p>{Husband}</p>
+            <div id="downloadWrapper" ref={certificateWrapper}>
+                <div id="certificateWrapper">
+                    <p id="husband">{Husband}</p>
+                    <p id="wife">{Wife}</p>
+                    <p id="date">{Date}</p>
 
-                        {/* image is in ration 4:3 */}
-                        <img src="https://ankitzm.co/template/template3.jpg" alt="Certificate" />
-                        <CoreBTN
-                            onClick={(e) => {
-                                e.preventDefault();
-                                exportComponentAsJPEG(certificateWrapper, {
-                                    html2CanvasOptions: { backgroundColor: null }
-                                });
-                            }}
-                            type="light"
-                            text="download"
-                        />
-                    </div>
+                    {/* image is in ration 4:3 */}
+                    <img src={Cert} alt="Certificate" />
                 </div>
             </div>
         </div>
+            <CoreBTN
+                onClick={(e) => {
+                    e.preventDefault();
+                    exportComponentAsPNG(certificateWrapper, {
+                        html2CanvasOptions: { backgroundColor: null }
+                    });
+                }}
+                type="light"
+                text="download"
+            />
+            </div>
     );
 
 }
