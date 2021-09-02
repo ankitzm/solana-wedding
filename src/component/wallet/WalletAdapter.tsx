@@ -13,6 +13,7 @@ import {
 	TransactionInstruction,
 	// sendAndConfirmTransaction,
 } from "@solana/web3.js"
+import solanaWeb3 from "@solana/web3.js/lib/index.iife.js"
 import * as borsh from "borsh"
 import CoreBTN from "../../core/btn/btn"
 
@@ -203,6 +204,32 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 		}
 	}
 
+	// temp wallet function
+	const url = 'https://api.devnet.solana.com'
+	var Address_new;
+	var DisplayBal;
+
+	function skStringToAccount(skString: any) {
+		return new solanaWeb3.Account(Uint8Array.from(skString.split(',')));
+	}
+	async function pageload() {
+		if (document.cookie === null || document.cookie === 'NONE') {
+			const account = new solanaWeb3.Account();
+			document.cookie = account.secretKey;
+		}
+		const account = skStringToAccount(document.cookie);
+		const address = account.publicKey.toString();
+		Address_new = address;
+		const connection = await new solanaWeb3.Connection(url, 'recent');
+		const balance = await connection.getBalance(account.publicKey);
+		const displayBal = balance +
+			" lamports (" +
+			balance / solanaWeb3.LAMPORTS_PER_SOL +
+			" SOL)";
+		DisplayBal = displayBal;
+
+	}
+
 	return (
 		<div className="WalletAdapter">
 			<div className="Wallet">
@@ -222,13 +249,13 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 							text="Send Transaction"
 							type="light"
 							id={undefined}
-							/>
+						/>
 						<CoreBTN
 							onClick={() => selectedWallet.disconnect()}
 							text="Disconnect"
 							type="light"
 							id={undefined}
-							/>
+						/>
 					</div>
 				) : (
 					<div>
@@ -244,6 +271,23 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 		</button> */}
 					</div>
 				)}
+			</div>
+
+			{/* temp wallet frontend */}
+
+			<div onLoad={pageload}>
+				<div style={{ float: "right" }}>Address:</div> {Address_new}
+				<div style={{ float: "right" }}>Balance:</div> {DisplayBal}
+
+				<CoreBTN
+					onClick={() => {
+						document.cookie='NONE'
+					}}
+					text="Destroy" type={undefined} id={undefined} />
+
+				<CoreBTN
+					onClick={() => alert(`[ ${document.cookie} ]`)}
+					text="show secret key" type={undefined} id={undefined} />
 			</div>
 
 			<h1>Register Your Marriage on <div id="main">Solana Blockchain</div></h1>
