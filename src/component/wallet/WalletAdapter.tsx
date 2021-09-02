@@ -55,7 +55,7 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 			})
 			selectedWallet.on("disconnect", () => {
 				setConnected(false)
-				addLog("Disconnected from wallet")
+				// addLog("Disconnected from wallet") 
 			})
 			void selectedWallet.connect()
 			return () => {
@@ -170,9 +170,9 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 			// addLog("Submitted transaction " + signature + ", awaiting confirmation");
 			await connection.confirmTransaction(signature, "singleGossip")
 			addLog("Transaction " + signature + " confirmed")
-			const balance = await connection.getBalance(greetedPubkey)
+			// const balance = await connection.getBalance(greetedPubkey)
 			// eslint-disable-next-line @typescript-eslint/restrict-plus-operands
-			addLog("Balance currently: " + balance)
+			// addLog("Balance currently: " + balance)
 			////////////////////////////////
 			// const transaction2 = new Transaction().add(sending_Data);
 			// addLog('Getting recent blockhash');
@@ -205,50 +205,48 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 
 	return (
 		<div className="WalletAdapter">
-			<h1>Register Your Marriage on Solana Blockchan</h1>
-			{/* <div>Network: {network}</div> */}
-			<div>
-				Select Wallet : <br />
-
-				<select onChange={e => setProviderUrl(e.target.value)}>
-					<option value="https://sollet.io/">Sollet</option>
-					<option value="https://phantom.app/">Phantom</option>
-					<option value="https://solflare.com/">Solflare</option>
-				</select>
-			</div>
-			{selectedWallet && selectedWallet.connected ? (
+			<div className="Wallet">
+				{/* <div>Network: {network}</div> */}
 				<div>
+
+					<select onChange={e => setProviderUrl(e.target.value)}>
+						<option value="https://sollet.io/">Sollet</option>
+						<option value="https://phantom.app/">Phantom</option>
+						<option value="https://solflare.com/">Solflare</option>
+					</select>
+				</div>
+				{selectedWallet && selectedWallet.connected ? (
 					<div>
-						Wallet address: {selectedWallet.publicKey?.toBase58()}.
+						<CoreBTN
+							onClick={sendTransaction}
+							text="Send Transaction"
+							type="light"
+							id={undefined}
+							/>
+						<CoreBTN
+							onClick={() => selectedWallet.disconnect()}
+							text="Disconnect"
+							type="light"
+							id={undefined}
+							/>
 					</div>
-					<CoreBTN
-						onClick={sendTransaction}
-						text="Send Transaction"
-						type="light"
-						id={undefined}
-					/>
-					<CoreBTN
-						onClick={() => selectedWallet.disconnect()}
-						text="Disconnect"
-						type="light"
-						id={undefined}
-					/>
-				</div>
-			) : (
-				<div>
-					<CoreBTN
-						onClick={() => setSelectedWallet(urlWallet)}
-						text="Connect to Wallet"
-						type="light"
-						id={undefined}
-					/>
+				) : (
+					<div>
+						<CoreBTN
+							onClick={() => setSelectedWallet(urlWallet)}
+							text="Connect to Wallet"
+							type="light"
+							id={undefined}
+						/>
 
-					{/* <button onClick={() => setSelectedWallet(injectedWallet)}>
+						{/* <button onClick={() => setSelectedWallet(injectedWallet)}>
             Connect to Injected Wallet
-          </button> */}
-				</div>
-			)}
+		</button> */}
+					</div>
+				)}
+			</div>
 
+			<h1>Register Your Marriage on <div id="main">Solana Blockchain</div></h1>
 			<div className="logs">
 				{logs.map((log, i) => (
 					<div key={i}>{log}</div>

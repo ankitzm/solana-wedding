@@ -1,9 +1,21 @@
 .WalletAdapter {
   padding: 8px;
-  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.7;
+}
+
+.Wallet {
+  display: flex;
+  justify-content: flex-end;
+}
+
+h1 {
+  margin-top: 60px;
+}
+
+h1 #main {
+  font-size: larger;
 }
 
 .logs {

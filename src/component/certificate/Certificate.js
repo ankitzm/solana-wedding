@@ -52,10 +52,10 @@ const Certificate = ({ sendDataToParent }) => {
                                 e.preventDefault();
                                 sendDataToParent(Data)
                             }}
-                            text="send data"
+                            text="Confirm Data"
                             type="light"
                         />
-
+                        <span className="sub-text"> Click Send Transaction to complete your Transaction </span>
 
                     </form>
                 </div>
