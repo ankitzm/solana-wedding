@@ -1,7 +1,7 @@
 import React from 'react'
-import Card from '../../component/card/Card';
 import Explorer from '../../component/explorer/Explorer'
 import Landing from '../../component/Landing/Landing';
+import Profile from '../../component/Profile/Profile';
 
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
         <div>
             <Landing />
             <Explorer />
-            <Card />
+            <Profile />
         </div>
     )
 }

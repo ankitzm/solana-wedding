@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { exportComponentAsPNG } from "react-component-export-image";
+import { Link } from 'react-router-dom';
 import "./Explorer.css"
 import Get from './callAPI'
 import CoreBTN from '../../core/btn/btn'
@@ -18,6 +19,10 @@ function Explorer() {
                 text="Get Data"
                 type="dark"
             />
+
+            <Link to="/certificate">
+                <CoreBTN text="Get your own Certificate" id="cert-page" type="dark" />
+            </Link>
 
 
             <div id="temp">

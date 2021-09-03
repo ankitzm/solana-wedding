@@ -35,12 +35,11 @@ function Get(search) {
             document.getElementById("date").innerHTML = moment(mainJSON.date).format("DD MMMM YYYY")
 
             // add QR code
-            var img = document.createElement("img");
-            img.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${search}&bgcolor=00`;
-            img.style.width = "80px"
-            img.style.height = "80px"
-            var src = document.getElementById("QR");
-            src.appendChild(img);
+            var QRimg = document.getElementById("QR")
+            QRimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${search}&bgcolor=00`;
+            QRimg.style.width = "80px"
+            QRimg.style.height = "80px"
+            
         })
         .catch(error => console.log('error', error));
 }
