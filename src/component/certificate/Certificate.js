@@ -3,7 +3,7 @@ import { exportComponentAsPNG } from "react-component-export-image";
 import CoreBTN from "../../core/btn/btn";
 import "./Certificate.css";
 import CertImg from "./../../assets/cert.png";
-import * as moment from "moment";
+import moment from "moment";
 
 const Certificate = ({ sendDataToParent }) => {
   const certificateWrapper = React.createRef();
@@ -42,7 +42,7 @@ const Certificate = ({ sendDataToParent }) => {
               type="date"
               value={Date}
               onChange={(e) =>
-                setDate(moment(e.target.value).format("DD MMMM YYYY"))
+                setDate(e.target.value)
               }
             />
             {/* {txid} */}
@@ -66,7 +66,7 @@ const Certificate = ({ sendDataToParent }) => {
             <p id="husband">{Husband}</p>
             <p id="wife">{Wife}</p>
             <script>txid = document.cookie;</script>
-            <p id="date">{txid}</p>
+            <p id="date">{Date === "" ? "" : moment(Date).format("DD MMMM YYYY")}</p>
 
             {/* image is in ration 4:3 */}
             <img src={CertImg} alt="Certificate" />

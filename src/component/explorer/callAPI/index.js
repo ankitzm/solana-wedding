@@ -1,3 +1,5 @@
+import moment from "moment";
+
 function Get(search) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -30,7 +32,7 @@ function Get(search) {
 
             document.getElementById("husband").innerHTML = mainJSON.husband
             document.getElementById("wife").innerHTML = mainJSON.wife
-            document.getElementById("date").innerHTML = mainJSON.date
+            document.getElementById("date").innerHTML = moment(mainJSON.date).format("DD MMMM YYYY")
 
             // add QR code
             var img = document.createElement("img");
