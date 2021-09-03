@@ -8,7 +8,10 @@ Such bond is cherished and wishes are made that it would last forever, well gues
 
 ### Solana Wedding Registry
 
-==================Add Images of the website================
+![image](https://user-images.githubusercontent.com/71517788/132047377-3b697fb7-1713-4a8d-8c07-dfe2a8f65532.png)
+
+
+
 
 Our Wedding Registry allows you to engrave your names into the blockchain. The website has multiple wallet connectivity facility. Once you connect your wallet, you will need to enter your names and the wedding date. A preview of the certificate will be generated as you enter your data.
 Once all the data is entered click confirm ! It will calculate the fees you need to pay and will ask for your approval. We have minimised the fees as much as we could.
@@ -16,6 +19,7 @@ Once all the data is entered click confirm ! It will calculate the fees you need
 Once you approve the transaction, within a few seconds the certificate gets generated. The certificate will consist a transaction id which you can use to get the certificate again in future if you require. The transaction id can be found in your wallet's transaction history as well as on the certificate.
 
 You can use our explorer to regenerate your certificate, you just need to input the transaction id there!!
+![image](https://user-images.githubusercontent.com/71517788/132047395-9d6517f9-d420-4824-ac35-94a134a43fce.png)
 
 Congrats on getting your names engraved permanently into the blockchain! We wish you a happy married lives from our side!!
 
