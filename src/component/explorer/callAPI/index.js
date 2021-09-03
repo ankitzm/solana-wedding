@@ -21,11 +21,6 @@ function Get(search) {
         redirect: 'follow'
     };
     // add QR code
-    var QRimg = document.getElementById("QR")
-    QRimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${search}`;
-    QRimg.style.width = "80px"
-    QRimg.style.height = "80px"
-    document.getElementById = QRimg
     fetch("https://api.devnet.solana.com", requestOptions)
     .then(response => response.json())
     .then(data => {
@@ -40,6 +35,11 @@ function Get(search) {
         document.getElementById("date").innerHTML = moment(mainJSON.date).format("DD MMMM YYYY")
         
         
+        var QRimg = document.getElementById("QR")
+        QRimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${search}`;
+        QRimg.style.width = "80px"
+        QRimg.style.height = "80px"
+        document.getElementById = QRimg
     })
     .catch(error => console.log('error', error));
 }
