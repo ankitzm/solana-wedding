@@ -36,7 +36,6 @@
 	display: inline;
 }
 
-
 #temp,
 .recieved {
 	font-size: 20px;
@@ -157,11 +156,12 @@ input {
 }
 #certificateWrapper #date {
 	left: 75%;
-	top: 73%;
+	top: 100%;
+	font-size: smaller;
 }
 
 #certificateWrapper #QR {
-	top : 35%;
+	top: 35%;
 	left: 80%;
 }
 
