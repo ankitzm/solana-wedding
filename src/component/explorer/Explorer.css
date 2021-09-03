@@ -161,7 +161,9 @@ input {
 }
 
 #certificateWrapper #QR {
-	top: 35%;
+	margin-left: 450px;
+	margin-top: -200px;
+	top: 45%;
 	left: 80%;
 }
 

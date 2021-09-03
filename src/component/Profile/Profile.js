@@ -18,12 +18,12 @@ function Profile() {
 					About="Backend Developer"
 				/>
 				<ProfileCard
-					Picture="https://media-exp1.licdn.com/dms/image/C4E03AQHCms51xt-iXQ/profile-displayphoto-shrink_100_100/0/1625233324895?e=1635984000&v=beta&t=mA-Syc-z6qtvqoIvO7G060tekp6jSE5p8Go4NamtU_8"
+					Picture="https://avatars.githubusercontent.com/u/71444879?v=4"
 					Name="Bhautik Poriya"
 					About="UI/UX Designer"
 				/>
 				<ProfileCard
-					Picture="https://media-exp1.licdn.com/dms/image/C4E03AQGcBYfmeTJmJw/profile-displayphoto-shrink_200_200/0/1621244919839?e=1635984000&v=beta&t=k2jSCzOn_z3r32ZI1ZL0ruqrBaYWMGnMkC9Da43iNyE"
+					Picture="https://avatars.githubusercontent.com/u/71517788?v=4"
 					Name="Harsh Ghodkar"
 					About="Blockchain Developer"
 				/>
