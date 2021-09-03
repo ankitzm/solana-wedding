@@ -28,10 +28,19 @@ function Get(search) {
             var mainJSON = JSON.parse(main.substring(main.indexOf("{"), main.indexOf("}") + 1));
             // console.log("from index" + mainJSON);                      // check
 
-            return mainJSON;
+            document.getElementById("husband").innerHTML = mainJSON.husband
+            document.getElementById("wife").innerHTML = mainJSON.wife
+            document.getElementById("date").innerHTML = mainJSON.date
+
+            // add QR code
+            var img = document.createElement("img");
+            img.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${search}&bgcolor=00`;
+            img.style.width = "80px"
+            img.style.height = "80px"
+            var src = document.getElementById("QR");
+            src.appendChild(img);
         })
         .catch(error => console.log('error', error));
-
 }
 
 export default Get;
