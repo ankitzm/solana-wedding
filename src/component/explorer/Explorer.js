@@ -35,7 +35,7 @@ function Explorer() {
                         <p id="husband"></p>
                         <p id="wife"></p>
                         <p id="date"></p>
-                        <p id="QR"></p>
+                        <p><img id="QR" alt="" /></p>
 
                         {/* image is in ratio 4:3 */}
                         <img src={CertImg} alt="Certificate" />

@@ -36,9 +36,10 @@ function Get(search) {
 
             // add QR code
             var QRimg = document.getElementById("QR")
-            QRimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${search}&bgcolor=00`;
+            QRimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${search}`;
             QRimg.style.width = "80px"
             QRimg.style.height = "80px"
+            document.getElementById = QRimg
             
         })
         .catch(error => console.log('error', error));
