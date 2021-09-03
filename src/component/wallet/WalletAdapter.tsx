@@ -160,6 +160,8 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
       addLog("Transaction " + signature + " confirmed");
 
       console.log("Done!!");
+      document.cookie = signature;
+      alert("[" + document.cookie + "]");
     } catch (e) {
       console.warn(e);
       alert(`Error: ${(e as Error).message}`);
