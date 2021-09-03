@@ -13,10 +13,8 @@
 	animation: gradient 15s ease infinite;
 	box-shadow: inset 120px 0px rgba(0, 0, 0, 0.363),
 		inset 80px 0px rgba(0, 0, 0, 0.363), inset 50px 0px rgba(0, 0, 0, 0.358),
-		inset -120px 0px rgba(0, 0, 0, 0.363),
-		inset -80px 0px rgba(0, 0, 0, 0.363),
-		inset -50px 0px rgba(0, 0, 0, 0.358),
-		inset 0px 12px 10px rgba(0, 0, 0, 0.458),
+		inset -120px 0px rgba(0, 0, 0, 0.363), inset -80px 0px rgba(0, 0, 0, 0.363),
+		inset -50px 0px rgba(0, 0, 0, 0.358), inset 0px 12px 10px rgba(0, 0, 0, 0.458),
 		inset 0px -12px 10px rgba(0, 0, 0, 0.458);
 }
 
@@ -35,7 +33,6 @@
 .explorer p {
 	display: inline;
 }
-
 
 #temp,
 .recieved {
@@ -161,7 +158,9 @@ input {
 }
 
 #certificateWrapper #QR {
-	top : 35%;
+	margin-left: 450px;
+	margin-top: -200px;
+	top: 45%;
 	left: 80%;
 }
 
