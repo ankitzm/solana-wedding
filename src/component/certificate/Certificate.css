@@ -1,164 +1,166 @@
 .certificate-container {
-  margin-top: 100px;
-  padding: 50px 0px;
-  display: flex;
-  flex-grow: 1;
-  background: linear-gradient(
-    135deg,
-    hsla(158, 100%, 50%, 1) 0%,
-    hsla(291, 100%, 56%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    135deg,
-    hsla(158, 100%, 50%, 1) 0%,
-    hsla(291, 100%, 56%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    135deg,
-    hsla(158, 100%, 50%, 1) 0%,
-    hsla(291, 100%, 56%, 1) 100%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FFA3", endColorstr="#DC1FFF", GradientType=1 );
+	margin-top: 100px;
+	padding: 50px 0px;
+	display: flex;
+	flex-grow: 1;
+	background: linear-gradient(
+		135deg,
+		hsla(158, 100%, 50%, 1) 0%,
+		hsla(291, 100%, 56%, 1) 100%
+	);
+	background: -moz-linear-gradient(
+		135deg,
+		hsla(158, 100%, 50%, 1) 0%,
+		hsla(291, 100%, 56%, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		135deg,
+		hsla(158, 100%, 50%, 1) 0%,
+		hsla(291, 100%, 56%, 1) 100%
+	);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FFA3", endColorstr="#DC1FFF", GradientType=1 );
 }
 
 .form-container {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  border: 1px solid black;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
 }
 
 .form {
-  border: 2px solid purple;
-  width: 40%;
+	width: 40%;
 }
 
 #form {
-  background-color: rgba(240, 248, 255, 0.432);
-  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
-  margin: 40px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 450px;
+	background-color: rgba(240, 248, 255, 0.432);
+	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
+	margin: 40px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 450px;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-  #form {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
+	#form {
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
 }
 
 input {
-  background-color: rgba(0, 0, 0, 0.795);
-  color: white;
-  border: none;
-  width: 250px;
-  padding: 10px 15px;
-  margin: 10px;
-  border-radius: 10px;
-  font-size: 18px;
+	background-color: rgba(0, 0, 0, 0.795);
+	color: white;
+	border: none;
+	width: 250px;
+	padding: 10px 15px;
+	margin: 10px;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.download {
+	display: flex;
+	width: 60vw;
+	justify-content: center;
+	align-items: center;
 }
 
 #downloadWrapper {
-  width: 60%;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: max-content;
 }
 
 #certificateWrapper {
-  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
+	overflow: hidden;
+	position: relative;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #certificateWrapper img {
-  display: block;
-  height: 450px;
-  width: auto;
+	height: auto;
+	width: 650px;
 }
 
 #certificateWrapper p {
-  color: #000;
-  position: absolute;
-  margin: 0;
-  text-align: left;
-  align-items: center;
-  font-size: 20px;
+	color: #000;
+	position: absolute;
+	margin: 0;
+	text-align: left;
+	align-items: center;
+	font-size: 20px;
 }
 
 #certificateWrapper #husband {
-  left: 35%;
-  top: 31%;
+	left: 35%;
+	top: 31%;
 }
 
 #certificateWrapper #wife {
-  left: 35%;
-  top: 47%;
+	left: 35%;
+	top: 47%;
 }
 #certificateWrapper #date {
-  left: 75%;
-  top: 73%;
+	left: 75%;
+	top: 73%;
 }
 
 .sub-text {
-  color: #000;
-  font-weight: bold;
+	color: #000;
+	font-weight: bold;
 }
 
 @media screen and (max-width: 1025px) {
-  .certificate-container {
-    flex-direction: column;
-    height: fit-content;
-  }
+	.certificate-container {
+		flex-direction: column;
+		height: fit-content;
+	}
 
-  .form,
-  #downloadWrapper {
-    width: 100%;
-  }
+	.form,
+	#downloadWrapper {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 650px) {
-  #certificateWrapper img {
-    width: 400px;
-    height: auto;
-  }
+	#certificateWrapper img {
+		width: 400px;
+		height: auto;
+	}
 
-  #form {
-    margin: 30px;
-  }
+	#form {
+		margin: 30px;
+	}
 
-  #certificateWrapper p {
-    font-size: 15px;
-  }
+	#certificateWrapper p {
+		font-size: 15px;
+	}
 }
 
 @media screen and (max-width: 450px) {
-  #certificateWrapper img {
-    width: 300px;
-    height: auto;
-  }
+	#certificateWrapper img {
+		width: 300px;
+		height: auto;
+	}
 
-  #certificateWrapper p {
-    font-size: 12px;
-  }
+	#certificateWrapper p {
+		font-size: 12px;
+	}
 
-  input {
-    width: 200px;
-    padding: 8px 13px;
-    margin: 8px;
-    border-radius: 6px;
-    font-size: 15px;
-  }
+	input {
+		width: 200px;
+		padding: 8px 13px;
+		margin: 8px;
+		border-radius: 6px;
+		font-size: 15px;
+	}
 
-  #form {
-    margin: 20px;
-    height: 400px;
-  }
+	#form {
+		margin: 20px;
+		height: 400px;
+	}
 }

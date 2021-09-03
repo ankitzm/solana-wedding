@@ -161,7 +161,7 @@ function WalletAdapter({ Data }: { Data: any }): React.ReactElement {
 
       console.log("Done!!");
       document.cookie = signature;
-      alert("[" + document.cookie + "]");
+      alert(document.cookie);
     } catch (e) {
       console.warn(e);
       alert(`Error: ${(e as Error).message}`);
