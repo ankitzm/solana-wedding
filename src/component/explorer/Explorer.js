@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { exportComponentAsPNG } from "react-component-export-image";
+import { exportComponentAsJPEG } from "react-component-export-image";
 import { Link } from 'react-router-dom';
 import "./Explorer.css"
 import Get from './callAPI'
 import CoreBTN from '../../core/btn/btn'
-import CertImg from './../../assets/cert.png'
+import CertImg from './../../assets/cert.jpg'
 
 function Explorer() {
     const certificateWrapper = React.createRef();
@@ -48,7 +48,7 @@ function Explorer() {
                 <CoreBTN
                     onClick={(e) => {
                         e.preventDefault();
-                        exportComponentAsPNG(certificateWrapper, {
+                        exportComponentAsJPEG(certificateWrapper, {
                             html2CanvasOptions: { backgroundColor: null },
                         });
                     }}

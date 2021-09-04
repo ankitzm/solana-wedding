@@ -107,31 +107,31 @@ input {
 	margin: 0;
 	text-align: left;
 	align-items: center;
-	font-size: 20px;
+	font-size: 17px;
 }
 
 #certificateWrapper-exp #husband {
-	left: 35%;
-	top: 31%;
+	left: 17%;
+	top: 29%;
 }
 
 #certificateWrapper-exp #wife {
-	left: 35%;
-	top: 47%;
+	left: 17%;
+	top: 45%;
 }
 #certificateWrapper-exp #date {
-	left: 70%;
-	top: 75%;
-	font-size: small;
+	left: 26%;
+	top: 79%;
+	
 }
 
 #certificateWrapper-exp #QR {
-	top: 45%;
+	top: 70%;
 	left: 80%;
 }
 
 #certificateWrapper-exp #QR img#QR-img {
-	width: 70px;
+	width: 60px;
 }
 
 /* responsiveness */
@@ -156,11 +156,26 @@ input {
 	}
 
 	#certificateWrapper-exp p {
-		font-size: 15px;
+		font-size: 13px;
+	}
+
+	#certificateWrapper-exp #husband {
+		left: 17%;
+		top: 27%;
+	}
+
+	#certificateWrapper-exp #wife {
+		left: 17%;
+		top: 44%;
+	}
+	#certificateWrapper-exp #date {
+		left: 26%;
+		top: 77%;
+		font-size: 11px;
 	}
 
 	#certificateWrapper-exp #QR img#QR-img {
-		width: 45px;
+		width: 40px;
 	}
 }
 
@@ -176,10 +191,25 @@ input {
 	}
 
 	#certificateWrapper-exp p {
-		font-size: 12px;
+		font-size: 11px;
+	}
+
+	#certificateWrapper-exp #husband {
+		left: 17%;
+		top: 26%;
+	}
+
+	#certificateWrapper-exp #wife {
+		left: 17%;
+		top: 43%;
+	}
+	#certificateWrapper-exp #date {
+		left: 26%;
+		top: 76%;
+		font-size: 9px;
 	}
 
 	#certificateWrapper-exp #QR img#QR-img {
-		width: 35px;
+		width: 34px;
 	}
 }

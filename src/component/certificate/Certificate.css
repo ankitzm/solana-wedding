@@ -68,22 +68,34 @@ input {
 	align-items: center;
 }
 
+.cert-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
 #downloadWrapper {
 	width: max-content;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 
 #certificateWrapper {
+	border-radius: 5px;
 	overflow: hidden;
-	position: relative;
-	width: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
-#certificateWrapper img {
+#certificateWrapper img#cert-new {
+	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
+	width: 600px;
 	height: auto;
-	width: 650px;
 }
 
 #certificateWrapper p {
@@ -92,21 +104,21 @@ input {
 	margin: 0;
 	text-align: left;
 	align-items: center;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 #certificateWrapper #husband {
-	left: 35%;
-	top: 31%;
+	left: 17%;
+	top: 30%;
 }
 
 #certificateWrapper #wife {
-	left: 35%;
+	left: 17%;
 	top: 47%;
 }
 #certificateWrapper #date {
-	left: 75%;
-	top: 73%;
+	left: 26%;
+	top: 79%;
 }
 
 .sub-text {
@@ -117,40 +129,52 @@ input {
 @media screen and (max-width: 1025px) {
 	.certificate-container {
 		flex-direction: column;
-		height: fit-content;
 	}
 
-	.form,
-	#downloadWrapper {
+	.form {
 		width: 100%;
+	}
+
+	#downloadWrapper {
+		width: auto;
+	}
+
+	.download {
+		width: 100vw;
 	}
 }
 
 @media screen and (max-width: 650px) {
-	#certificateWrapper img {
-		width: 400px;
-		height: auto;
-	}
-
 	#form {
 		margin: 30px;
 	}
 
-	#certificateWrapper p {
-		font-size: 15px;
-	}
-}
-
-@media screen and (max-width: 450px) {
-	#certificateWrapper img {
-		width: 300px;
+	#certificateWrapper img#cert-new{
+		width: 350px;
 		height: auto;
 	}
 
 	#certificateWrapper p {
-		font-size: 12px;
+		font-size: 13px;
 	}
 
+	#certificateWrapper #husband {
+		left: 17%;
+		top: 27%;
+	}
+
+	#certificateWrapper #wife {
+		left: 17%;
+		top: 44%;
+	}
+	#certificateWrapper #date {
+		left: 26%;
+		top: 77%;
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 450px) {
 	input {
 		width: 200px;
 		padding: 8px 13px;
@@ -162,5 +186,29 @@ input {
 	#form {
 		margin: 20px;
 		height: 400px;
+	}
+
+	#certificateWrapper img#cert-image {
+		width: 280px;
+		height: auto;
+	}
+
+	#certificateWrapper p {
+		font-size: 11px;
+	}
+
+	#certificateWrapper #husband {
+		left: 17%;
+		top: 26%;
+	}
+
+	#certificateWrapper #wife {
+		left: 17%;
+		top: 43%;
+	}
+	#certificateWrapper #date {
+		left: 26%;
+		top: 76%;
+		font-size: 9px;
 	}
 }

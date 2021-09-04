@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { exportComponentAsPNG } from "react-component-export-image";
+import { exportComponentAsJPEG } from "react-component-export-image";
 import CoreBTN from "../../core/btn/btn";
 import "./Certificate.css";
-import CertImg from "./../../assets/cert.png";
+import CertImg from "./../../assets/cert.jpg";
 import moment from "moment";
 
 const Certificate = ({ sendDataToParent }) => {
@@ -70,7 +70,7 @@ const Certificate = ({ sendDataToParent }) => {
                             <p id="date">{Date === "" ? "" : moment(Date).format("DD MMMM YYYY")}</p>
 
                             {/* image is in ration 4:3 */}
-                            <img src={CertImg} alt="Certificate" />
+                            <img id="cert-new" src={CertImg} alt="Certificate" />
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const Certificate = ({ sendDataToParent }) => {
                     }
                     console.log(txid);
                     e.preventDefault();
-                    exportComponentAsPNG(certificateWrapper, {
+                    exportComponentAsJPEG(certificateWrapper, {
                         html2CanvasOptions: { backgroundColor: "#5e8fff" },
                     });
                 }}
