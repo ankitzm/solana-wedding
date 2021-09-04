@@ -33,7 +33,7 @@ function Explorer() {
             </div>
 
             <div className="cert-container">
-                <div id="downloadWrapper" ref={certificateWrapper}>
+                <div id="downloadWrapper-exp" ref={certificateWrapper}>
                     <div id="certificateWrapper-exp">
                         <p id="husband"></p>
                         <p id="wife"></p>

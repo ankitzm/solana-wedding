@@ -79,7 +79,7 @@ input {
 	margin-top: 20px;
 }
 
-#downloadWrapper {
+#downloadWrapper-exp {
 	width: max-content;
 	border: 1px solid black;
 	display: flex;
@@ -97,7 +97,7 @@ input {
 
 #certificateWrapper-exp img#cert-image {
 	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
-	width: 550px;
+	width: 500px;
 	height: auto;
 }
 
@@ -165,6 +165,11 @@ input {
 }
 
 @media screen and (max-width: 450px) {
+	.explorer {
+		box-shadow: inset 0px 12px 10px rgba(0, 0, 0, 0.458),
+			inset 0px -12px 10px rgba(0, 0, 0, 0.458);
+	}
+
 	#certificateWrapper-exp img#cert-image {
 		width: 280px;
 		height: auto;
