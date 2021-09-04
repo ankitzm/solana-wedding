@@ -12,7 +12,7 @@ function Explorer() {
     const [QRurl, setQRurl] = useState("")
     return (
         <div className="explorer">
-            <input type="text" onChange={e => setSearch(e.target.value)} placeholder="Transaction ID" />
+            <input type="text" onChange={e => setSearch(e.target.value.trim())} placeholder="Transaction ID" />
             <CoreBTN
                 id="toggle"
                 onClick={e => {
