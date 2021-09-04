@@ -8,7 +8,7 @@ function GetSOL(accountID) {
     "method": "requestAirdrop",
     "params": [
       accountID,
-      1
+      5000000000
     ]
   });
 

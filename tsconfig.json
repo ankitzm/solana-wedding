@@ -22,6 +22,6 @@
   },
   "include": [
     "src",
-    "src/component/wallet/WalletAdapter.tsx"
+    "src/component/wallet/"
   ]
 }
