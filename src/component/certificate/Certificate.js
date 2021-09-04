@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { exportComponentAsJPEG } from "react-component-export-image";
 import CoreBTN from "../../core/btn/btn";
 import "./Certificate.css";
 import CertImg from "./../../assets/cert.jpg";
@@ -17,7 +16,6 @@ const Certificate = ({ sendDataToParent }) => {
     Wife: Wife,
     Date: Date,
   };
-  let txid;
 
   //   Data.Date = moment(Data.Date).format("DD MMMM YYYY");
 
@@ -64,7 +62,7 @@ const Certificate = ({ sendDataToParent }) => {
             <div id="certificateWrapper">
               <p id="husband">{Husband}</p>
               <p id="wife">{Wife}</p>
-              <script>txid = document.cookie;</script>
+
               <p id="date">
                 {Date === "" ? "" : moment(Date).format("DD MMMM YYYY")}
               </p>
