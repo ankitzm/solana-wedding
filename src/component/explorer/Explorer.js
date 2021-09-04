@@ -9,13 +9,16 @@ import CertImg from './../../assets/cert.png'
 function Explorer() {
     const certificateWrapper = React.createRef();
     const [search, setSearch] = useState('')
-
+    const [QRurl, setQRurl] = useState("")
     return (
         <div className="explorer">
             <input type="text" onChange={e => setSearch(e.target.value)} placeholder="Transaction ID" />
             <CoreBTN
                 id="toggle"
-                onClick={e => Get(search)}
+                onClick={e => {
+                    Get(search);
+                    setQRurl(search);
+                }}
                 text="Get Data"
                 type="dark"
             />
@@ -31,14 +34,14 @@ function Explorer() {
 
             <div className="cert-container">
                 <div id="downloadWrapper" ref={certificateWrapper}>
-                    <div id="certificateWrapper">
+                    <div id="certificateWrapper-exp">
                         <p id="husband"></p>
                         <p id="wife"></p>
                         <p id="date"></p>
-                        <p><img id="QR" alt="" /></p>
+                        <p id="QR"><img id="QR-img" src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${QRurl}`} alt=""/> </p>
 
                         {/* image is in ratio 4:3 */}
-                        <img src={CertImg} alt="Certificate" />
+                        <img id="cert-image" src={CertImg} alt="Certificate" />
                     </div>
                 </div>
 

@@ -36,29 +36,15 @@
 	display: inline;
 }
 
-#temp,
-.recieved {
+#temp {
 	font-size: 20px;
-	margin-top: 30px;
+	margin-top: 60px;
 	color: black;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-}
-
-#temp {
-	margin-top: 60px;
 	font-weight: bold;
-}
-
-.recieved p {
-	font-weight: bold;
-}
-
-.formatted {
-	text-align: left;
-	white-space: pre-line;
 }
 
 input {
@@ -72,29 +58,8 @@ input {
 	box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.425);
 }
 
-.cert-pdf {
-	height: 300px;
-	width: 400px;
-}
-
-@media screen and (max-width: 860px) {
-	.recieved {
-		flex-direction: column;
-	}
-
-	.cert-pdf {
-		margin-top: 50px;
-	}
-}
-
 @media screen and (max-width: 500px) {
-	.cert-pdf {
-		height: auto;
-		width: 80%;
-	}
-
-	#temp,
-	.recieved {
+	#temp {
 		font-size: 16px;
 	}
 
@@ -125,18 +90,18 @@ input {
 	position: relative;
 }
 
-#certificateWrapper {
+#certificateWrapper-exp {
 	border-radius: 5px;
 	overflow: hidden;
 }
 
-#certificateWrapper img {
+#certificateWrapper-exp img#cert-image {
 	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
-	width: max-content;
+	width: 550px;
 	height: auto;
 }
 
-#certificateWrapper p {
+#certificateWrapper-exp p {
 	color: #000;
 	position: absolute;
 	margin: 0;
@@ -145,53 +110,71 @@ input {
 	font-size: 20px;
 }
 
-#certificateWrapper #husband {
+#certificateWrapper-exp #husband {
 	left: 35%;
 	top: 31%;
 }
 
-#certificateWrapper #wife {
+#certificateWrapper-exp #wife {
 	left: 35%;
 	top: 47%;
 }
-#certificateWrapper #date {
+#certificateWrapper-exp #date {
 	left: 70%;
-	top: -10%;
-	margin-top: 7px;
-	margin-right: 20px;
+	top: 75%;
 	font-size: small;
 }
 
-#certificateWrapper #QR {
-	margin-left: 450px;
-	margin-top: -200px;
+#certificateWrapper-exp #QR {
 	top: 45%;
 	left: 80%;
 }
 
-img {
-	width: 40px;
-	height: 40px;
+#certificateWrapper-exp #QR img#QR-img {
+	width: 70px;
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 900px) {
+	.explorer {
+		box-shadow: inset 90px 0px rgba(0, 0, 0, 0.363),
+			inset 60px 0px rgba(0, 0, 0, 0.363),
+			inset 40px 0px rgba(0, 0, 0, 0.358),
+			inset -90px 0px rgba(0, 0, 0, 0.363),
+			inset -60px 0px rgba(0, 0, 0, 0.363),
+			inset -40px 0px rgba(0, 0, 0, 0.358),
+			inset 0px 12px 10px rgba(0, 0, 0, 0.458),
+			inset 0px -12px 10px rgba(0, 0, 0, 0.458);
+	}
 }
 
 @media screen and (max-width: 650px) {
-	#certificateWrapper img {
+	#certificateWrapper-exp img#cert-image {
 		width: 350px;
 		height: auto;
 	}
 
-	#certificateWrapper p {
+	#certificateWrapper-exp p {
 		font-size: 15px;
+	}
+
+	#certificateWrapper-exp #QR img#QR-img {
+		width: 45px;
 	}
 }
 
 @media screen and (max-width: 450px) {
-	#certificateWrapper img {
+	#certificateWrapper-exp img#cert-image {
 		width: 280px;
 		height: auto;
 	}
 
-	#certificateWrapper p {
+	#certificateWrapper-exp p {
 		font-size: 12px;
+	}
+
+	#certificateWrapper-exp #QR img#QR-img {
+		width: 35px;
 	}
 }

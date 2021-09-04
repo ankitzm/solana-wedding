@@ -33,13 +33,6 @@ function Get(search) {
         document.getElementById("husband").innerHTML = mainJSON.husband
         document.getElementById("wife").innerHTML = mainJSON.wife
         document.getElementById("date").innerHTML = moment(mainJSON.date).format("DD MMMM YYYY")
-        
-        
-        var QRimg = document.getElementById("QR")
-        QRimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${search}`;
-        QRimg.style.width = "80px"
-        QRimg.style.height = "80px"
-        document.getElementById = QRimg
     })
     .catch(error => console.log('error', error));
 }
