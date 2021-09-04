@@ -8,7 +8,17 @@ function Landing() {
 			<div className="heading">
 				<img className="solana-logo" src={SolanaLogo} alt="" /> <br />
 				WEDDING
-				<p className="sub-heading">Save Your Wedding Forever</p>
+				{/* <p className="sub-heading">Save Your Wedding Forever</p> */}
+				<div class="sp-container">
+					<div class="sp-content">
+						<h2 class="frame-5">
+							<span>Save </span>
+							<span>Your Wedding </span>
+							<span>Forever.</span>
+						</h2>
+					</div>
+				</div>
+
 			</div>
 			<img
 				src={RightLeaf}
