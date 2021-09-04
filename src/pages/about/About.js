@@ -1,10 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./About.css"
 import Website from "./../../assets/website.png"
 
 function About() {
     return (
         <div className="about">
+            <Link className="home-btn" to="/">
+                <img src="https://img.icons8.com/glyph-neue/38/262626/home.png" alt="home" />
+            </Link>
             <div className="heading-container">
                 <div className="title">SOLANA SHADII</div>
                 <dic className="sub-title">Solana Wedding Registry</dic>
@@ -48,7 +52,7 @@ function About() {
                     <li>Any certificate can be regenerated through our explorer on the Homepage if you input the transaction id. </li>
                 </ul>
 
-<br />
+                <br />
                 <div className="end-text">Congratulations on getting your names engraved on blockchain !!</div>
             </div>
         </div>
