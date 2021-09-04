@@ -1,0 +1,95 @@
+.about {
+	padding: 50px 0px;
+    background: #014233;
+}
+
+.heading-container {
+	padding: 40px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #127da3, #149c7d);
+	background-size: 400% 400%;
+	box-shadow: 0px 0px 20px 0.2px black;
+	animation: gradient 15s ease infinite;
+}
+
+.title {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.sub-title {
+	font-size: 25px;
+	font-weight: 600;
+}
+
+img#website {
+	margin: 20px 0px;
+	box-shadow: 0px 0px 5px 0.2px rgb(120, 216, 203);
+	width: 700px;
+	align-self: center;
+}
+
+.content {
+	color: rgba(219, 219, 219, 0.788);
+	text-align: left;
+	margin: 50px 150px;
+	font-size: 20px;
+	line-height: 150%;
+}
+
+.content ul li {
+	margin-top: 10px;
+}
+
+.content ul li a {
+	color: rgb(0, 185, 185);
+	text-decoration: none;
+}
+
+.end-text {
+	font-size: larger;
+}
+
+@media screen and (max-width:1025px) {
+    .content {
+        margin: 40px 10%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    img#website {
+        width: 550px;
+    }
+
+    .content {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .content {
+        margin: 20px 5%;
+        font-size: 15px;
+    }
+
+    img#website {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .sub-title {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:420px) { 
+    .title {
+        font-size: 28px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+    }
+}

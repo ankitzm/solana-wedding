@@ -27,6 +27,12 @@
 	width: 400px;
 }
 
+#about-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
 /* adding responsiveness  */
 
 @media screen and (max-width: 1025px) {
