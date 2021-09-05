@@ -1,82 +1,79 @@
 h3 {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 
 h6 {
-  margin: 5px 0;
-  text-transform: uppercase;
+	margin: 5px 0;
+	text-transform: uppercase;
 }
 
 p {
-  font-size: 14px;
-  line-height: 21px;
+	font-size: 14px;
+	line-height: 21px;
 }
 
 .card-container {
-  background-color: #51bea7c4;
-  border-radius: 5px;
-  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-  color: #000000;
-  padding: 30px;
-  position: relative;
-  width: 200px;
-  max-width: 100%;
-  text-align: center;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+	color: #000000;
+	padding: 30px;
+	position: relative;
+	width: 200px;
+	max-width: 100%;
+	text-align: center;
 
-  margin: 30px 10px;
-  height: 340px;
+	height: 340px;
 }
 
 .card-container .round {
-  border: 3px solid #e4e4e4;
-  border-radius: 50%;
-  height: 180px;
-  width: 180px;
-  padding: 4px;
+	border: 3px solid #e4e4e4;
+	border-radius: 40px;
+	height: 160px;
+	width: 150px;
+	padding: 4px;
 }
 .card {
-  perspective: 150rem;
-  position: relative;
-  height: 40rem;
-  max-width: 400px;
-  margin: 2rem;
-  box-shadow: none;
-  background: none;
+	perspective: 150rem;
+	position: relative;
+	height: 20px;
+	max-width: 300px;
+	box-shadow: none;
+	background: none;
 }
 
 .card-side {
-  height: 35rem;
-  border-radius: 15px;
-  transition: all 0.8s ease;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  padding: 2rem;
-  color: white;
+	height: 300px;
+	border-radius: 15px;
+	transition: all 0.8s ease;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	padding: 20px;
+	color: white;
 }
 
 .card-side.back {
-  transform: rotateY(-180deg);
-  background-color: #4158d0;
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
-  );
+	transform: rotateY(-180deg);
+	background-color: #4158d0;
+	background-image: linear-gradient(
+		43deg,
+		#4158d0 0%,
+		#c850c0 46%,
+		#ffcc70 100%
+	);
 }
 
 .card-side.front {
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+	background-color: #0093e9;
+	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 }
 
 .card:hover .card-side.front {
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 .card:hover .card-side.back {
-  transform: rotateY(0deg);
+	transform: rotateY(0deg);
 }
