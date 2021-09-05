@@ -25,10 +25,11 @@ const ProfileCard = ({ Picture, Name, About, GitHub, LinkedIn }) => {
 							<br />
 							<br />
 							<a href={LinkedIn} target="_blank">
-								LinkedIn
 								<img
 									alt="LinkedIn"
 									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Pxv4t5SEZXjQRx4f_hBVi_wM_Wni9fqydQ&usqp=CAU"
+									height="50px"
+									width="50px"
 								/>
 							</a>
 						</div>

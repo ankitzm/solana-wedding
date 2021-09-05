@@ -22,13 +22,12 @@ p {
 	max-width: 100%;
 	text-align: center;
 
-	margin: 30px 10px;
 	height: 340px;
 }
 
 .card-container .round {
 	border: 3px solid #e4e4e4;
-	border-radius: 50%;
+	border-radius: 40px;
 	height: 180px;
 	width: 180px;
 	padding: 4px;
@@ -52,7 +51,7 @@ p {
 	top: 0;
 	left: 0;
 	width: 80%;
-	padding: 2rem;
+	padding: 25px;
 	color: white;
 }
 
