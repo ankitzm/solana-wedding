@@ -16,16 +16,18 @@ const ProfileCard = ({ Picture, Name, About, GitHub, LinkedIn }) => {
             <div>
               <a href={GitHub} target="_blank">
                 <img
-                  alt="Qries"
+                  alt="GitHub"
                   src="https://miro.medium.com/max/640/1*75jvBleoQfAZJc3sgTSPQA.jpeg"
-                  //   width="150"
-                  //   height="70"
                 />
               </a>
               <br />
               <br />
               <a href={LinkedIn} target="_blank">
                 LinkedIn
+                <img
+                  alt="LinkedIn"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Pxv4t5SEZXjQRx4f_hBVi_wM_Wni9fqydQ&usqp=CAU"
+                />
               </a>
             </div>
           </div>
