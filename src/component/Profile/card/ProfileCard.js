@@ -17,7 +17,7 @@ const ProfileCard = ({ Picture, Name, About, GitHub, LinkedIn }) => {
 							<a href={GitHub} target="_blank">
 								<img
 									alt="GitHub"
-									src="https://miro.medium.com/max/640/1*75jvBleoQfAZJc3sgTSPQA.jpeg"
+									src="https://user-images.githubusercontent.com/69706506/132130484-030f3025-e95c-4ff5-bb6f-2ee617db2bfa.gif"
 									height="50px"
 									width="50px"
 								/>
@@ -27,7 +27,7 @@ const ProfileCard = ({ Picture, Name, About, GitHub, LinkedIn }) => {
 							<a href={LinkedIn} target="_blank">
 								<img
 									alt="LinkedIn"
-									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Pxv4t5SEZXjQRx4f_hBVi_wM_Wni9fqydQ&usqp=CAU"
+									src="https://user-images.githubusercontent.com/69706506/132130473-81568b64-9a40-4fe2-b5d7-6863bfab59f4.gif"
 									height="50px"
 									width="50px"
 								/>
