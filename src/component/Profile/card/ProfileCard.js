@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProfileCard.css";
 
-const ProfileCard = ({ Picture, Name, About, Back_Side }) => {
+const ProfileCard = ({ Picture, Name, About, GitHub, LinkedIn }) => {
   return (
     <div className="profile-card">
       <div className="card-container">
@@ -13,7 +13,21 @@ const ProfileCard = ({ Picture, Name, About, Back_Side }) => {
             <h4>{About}</h4>
           </div>
           <div class="card-side back">
-            <div>{Back_Side}</div>
+            <div>
+              <a href={GitHub} target="_blank">
+                <img
+                  alt="Qries"
+                  src="https://miro.medium.com/max/640/1*75jvBleoQfAZJc3sgTSPQA.jpeg"
+                  //   width="150"
+                  //   height="70"
+                />
+              </a>
+              <br />
+              <br />
+              <a href={LinkedIn} target="_blank">
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>
