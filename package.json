@@ -1,6 +1,6 @@
 {
   "homepage": "http://ankitzm.co/solana-wedding",
-  "name": "client",
+  "name": "solana-wedding",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
