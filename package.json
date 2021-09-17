@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:program-rust": "cargo build-bpf --manifest-path=./program-rust/Cargo.toml",
+    "build:program-rust": "cargo build-bpf --manifest-path=./program-rust/Cargo.toml"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +45,6 @@
   "devDependencies": {
     "@types/react": "^17.0.21",
     "@types/react-dom": "^17.0.9",
-    "@types/react-router-dom": "^5.1.9",
+    "@types/react-router-dom": "^5.1.9"
   }
 }
