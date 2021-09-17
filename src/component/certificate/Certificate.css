@@ -3,21 +3,11 @@
 	padding: 50px 0px;
 	display: flex;
 	flex-grow: 1;
-	background: linear-gradient(
-		135deg,
-		hsla(158, 100%, 50%, 1) 0%,
-		hsla(291, 100%, 56%, 1) 100%
-	);
-	background: -moz-linear-gradient(
-		135deg,
-		hsla(158, 100%, 50%, 1) 0%,
-		hsla(291, 100%, 56%, 1) 100%
-	);
-	background: -webkit-linear-gradient(
-		135deg,
-		hsla(158, 100%, 50%, 1) 0%,
-		hsla(291, 100%, 56%, 1) 100%
-	);
+	box-shadow: inset 0px 12px 10px rgba(0, 0, 0, 0.458),
+		inset 0px -12px 10px rgba(0, 0, 0, 0.458);
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FFA3", endColorstr="#DC1FFF", GradientType=1 );
 }
 
@@ -149,7 +139,7 @@ input {
 		margin: 30px;
 	}
 
-	#certificateWrapper img#cert-new{
+	#certificateWrapper img#cert-new {
 		width: 350px;
 		height: auto;
 	}
