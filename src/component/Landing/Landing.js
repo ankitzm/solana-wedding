@@ -13,7 +13,7 @@ function Landing() {
 			<img src={LeftLeaf} alt="left-leaf" className="leaf" data-aos="fade-left" />
 			<div className="heading">
 				<img className="solana-logo" src={SolanaLogo} alt="" /> <br />
-				WEDDING
+				SHADI
 				<p className="sub-heading">Save Your Wedding Forever</p>
 			</div>
 			<img
