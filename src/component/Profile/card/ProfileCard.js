@@ -14,7 +14,7 @@ const ProfileCard = ({ Picture, Name, About, GitHub, LinkedIn }) => {
           </div>
           <div class="card-side back">
             <div>
-              <a href={GitHub} target="_blank">
+              <a href={GitHub} target="_blank" rel="noreferrer">
                 <img
                   alt="GitHub"
                   src="https://user-images.githubusercontent.com/69706506/132130484-030f3025-e95c-4ff5-bb6f-2ee617db2bfa.gif"
