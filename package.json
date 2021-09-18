@@ -1,5 +1,4 @@
 {
-  "homepage": "http://ankitzm.co/solana-wedding",
   "name": "solana-wedding",
   "version": "0.1.0",
   "private": true,
@@ -23,9 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:program-rust": "cargo build-bpf --manifest-path=./program-rust/Cargo.toml",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build:program-rust": "cargo build-bpf --manifest-path=./program-rust/Cargo.toml"
   },
   "eslintConfig": {
     "extends": [
@@ -48,7 +45,6 @@
   "devDependencies": {
     "@types/react": "^17.0.21",
     "@types/react-dom": "^17.0.9",
-    "@types/react-router-dom": "^5.1.9",
-    "gh-pages": "^3.2.3"
+    "@types/react-router-dom": "^5.1.9"
   }
 }
