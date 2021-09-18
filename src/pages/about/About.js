@@ -23,11 +23,7 @@ function About() {
                 Steps one needs to follow to use it: <br />
 
                 <ul>
-                    <li>Go to the{" "}
-                        <Link to="/" color="blue">
-                            Homepage
-                        </Link>
-                        , click on the "Get your own certificate" button. </li>
+                    <li>Go to the <a href="https://solanashadii.netlify.app/">Homepage</a>, click on the "Get your own certificate" button. </li>
 
                     <li>You will now be taken to a new page where you will be making the transaction. </li>
 
