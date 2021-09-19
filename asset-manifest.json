@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/solana-wedding/static/css/main.6edcefd6.chunk.css",
+    "main.js": "/solana-wedding/static/js/main.a054785c.chunk.js",
+    "main.js.map": "/solana-wedding/static/js/main.a054785c.chunk.js.map",
+    "runtime-main.js": "/solana-wedding/static/js/runtime-main.21147278.js",
+    "runtime-main.js.map": "/solana-wedding/static/js/runtime-main.21147278.js.map",
+    "static/js/2.c94a8d7f.chunk.js": "/solana-wedding/static/js/2.c94a8d7f.chunk.js",
+    "static/js/2.c94a8d7f.chunk.js.map": "/solana-wedding/static/js/2.c94a8d7f.chunk.js.map",
+    "index.html": "/solana-wedding/index.html",
+    "static/css/main.6edcefd6.chunk.css.map": "/solana-wedding/static/css/main.6edcefd6.chunk.css.map",
+    "static/js/2.c94a8d7f.chunk.js.LICENSE.txt": "/solana-wedding/static/js/2.c94a8d7f.chunk.js.LICENSE.txt",
+    "static/media/cert.889a7d9a.jpg": "/solana-wedding/static/media/cert.889a7d9a.jpg",
+    "static/media/leaf-left.009cabf9.png": "/solana-wedding/static/media/leaf-left.009cabf9.png",
+    "static/media/leaf-right.e9fce577.png": "/solana-wedding/static/media/leaf-right.e9fce577.png",
+    "static/media/logo.feff26ff.svg": "/solana-wedding/static/media/logo.feff26ff.svg",
+    "static/media/website.38876a6d.png": "/solana-wedding/static/media/website.38876a6d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21147278.js",
+    "static/js/2.c94a8d7f.chunk.js",
+    "static/css/main.6edcefd6.chunk.css",
+    "static/js/main.a054785c.chunk.js"
+  ]
+}

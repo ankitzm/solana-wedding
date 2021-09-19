@@ -1,0 +1,356 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/*!
+   * html2canvas 1.0.0-rc.7 <https://html2canvas.hertzen.com>
+   * Copyright (c) 2020 Niklas von Hertzen <https://hertzen.com>
+   * Released under MIT License
+   */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*!
+Copyright (C) 2013-2017 by Andrea Giammarchi - @WebReflection
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+*/
+
+/*! *****************************************************************************
+        Copyright (c) Microsoft Corporation. All rights reserved.
+        Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+        this file except in compliance with the License. You may obtain a copy of the
+        License at http://www.apache.org/licenses/LICENSE-2.0
+    
+        THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+        KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+        WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+        MERCHANTABLITY OR NON-INFRINGEMENT.
+    
+        See the Apache Version 2.0 License for specific language governing permissions
+        and limitations under the License.
+        ***************************************************************************** */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/**
+           * jsPDF fromHTML plugin. BETA stage. API subject to change. Needs browser
+           * Copyright (c) 2012 Willow Systems Corporation, willow-systems.com
+           *               2014 Juan Pablo Gaviria, https://github.com/juanpgaviria
+           *               2014 Diego Casorran, https://github.com/diegocr
+           *               2014 Daniel Husar, https://github.com/danielhusar
+           *               2014 Wolfgang Gassler, https://github.com/woolfg
+           *               2014 Steven Spungin, https://github.com/flamenco
+           *
+           * @license
+           * 
+           * ====================================================================
+           */
+
+/**
+         * @license
+         * 
+         * Copyright (c) 2014 James Robb, https://github.com/jamesbrobb
+         *
+         * 
+         * ====================================================================
+         */
+
+/**
+         * @license
+         * Copyright (c) 2014 Steven Spungin (TwelveTone LLC)  steven@twelvetone.tv
+         *
+         * Licensed under the MIT License.
+         * http://opensource.org/licenses/mit-license
+         */
+
+/**
+         * @license
+         * Copyright (c) 2016 Alexander Weidt,
+         * https://github.com/BiggA94
+         * 
+         * Licensed under the MIT License. http://opensource.org/licenses/mit-license
+         */
+
+/**
+         * @license
+         * Copyright (c) 2017 Aras Abbasi 
+         *
+         * Licensed under the MIT License.
+         * http://opensource.org/licenses/mit-license
+         */
+
+/**
+         * @license
+         * Licensed under the MIT License.
+         * http://opensource.org/licenses/mit-license
+         */
+
+/**
+ * Support for translating between Uint8Array instances and JavaScript
+ * native types.
+ *
+ * {@link module:Layout~Layout|Layout} is the basis of a class
+ * hierarchy that associates property names with sequences of encoded
+ * bytes.
+ *
+ * Layouts are supported for these scalar (numeric) types:
+ * * {@link module:Layout~UInt|Unsigned integers in little-endian
+ *   format} with {@link module:Layout.u8|8-bit}, {@link
+ *   module:Layout.u16|16-bit}, {@link module:Layout.u24|24-bit},
+ *   {@link module:Layout.u32|32-bit}, {@link
+ *   module:Layout.u40|40-bit}, and {@link module:Layout.u48|48-bit}
+ *   representation ranges;
+ * * {@link module:Layout~UIntBE|Unsigned integers in big-endian
+ *   format} with {@link module:Layout.u16be|16-bit}, {@link
+ *   module:Layout.u24be|24-bit}, {@link module:Layout.u32be|32-bit},
+ *   {@link module:Layout.u40be|40-bit}, and {@link
+ *   module:Layout.u48be|48-bit} representation ranges;
+ * * {@link module:Layout~Int|Signed integers in little-endian
+ *   format} with {@link module:Layout.s8|8-bit}, {@link
+ *   module:Layout.s16|16-bit}, {@link module:Layout.s24|24-bit},
+ *   {@link module:Layout.s32|32-bit}, {@link
+ *   module:Layout.s40|40-bit}, and {@link module:Layout.s48|48-bit}
+ *   representation ranges;
+ * * {@link module:Layout~IntBE|Signed integers in big-endian format}
+ *   with {@link module:Layout.s16be|16-bit}, {@link
+ *   module:Layout.s24be|24-bit}, {@link module:Layout.s32be|32-bit},
+ *   {@link module:Layout.s40be|40-bit}, and {@link
+ *   module:Layout.s48be|48-bit} representation ranges;
+ * * 64-bit integral values that decode to an exact (if magnitude is
+ *   less than 2^53) or nearby integral Number in {@link
+ *   module:Layout.nu64|unsigned little-endian}, {@link
+ *   module:Layout.nu64be|unsigned big-endian}, {@link
+ *   module:Layout.ns64|signed little-endian}, and {@link
+ *   module:Layout.ns64be|unsigned big-endian} encodings;
+ * * 32-bit floating point values with {@link
+ *   module:Layout.f32|little-endian} and {@link
+ *   module:Layout.f32be|big-endian} representations;
+ * * 64-bit floating point values with {@link
+ *   module:Layout.f64|little-endian} and {@link
+ *   module:Layout.f64be|big-endian} representations;
+ * * {@link module:Layout.const|Constants} that take no space in the
+ *   encoded expression.
+ *
+ * and for these aggregate types:
+ * * {@link module:Layout.seq|Sequence}s of instances of a {@link
+ *   module:Layout~Layout|Layout}, with JavaScript representation as
+ *   an Array and constant or data-dependent {@link
+ *   module:Layout~Sequence#count|length};
+ * * {@link module:Layout.struct|Structure}s that aggregate a
+ *   heterogeneous sequence of {@link module:Layout~Layout|Layout}
+ *   instances, with JavaScript representation as an Object;
+ * * {@link module:Layout.union|Union}s that support multiple {@link
+ *   module:Layout~VariantLayout|variant layouts} over a fixed
+ *   (padded) or variable (not padded) span of bytes, using an
+ *   unsigned integer at the start of the data or a separate {@link
+ *   module:Layout.unionLayoutDiscriminator|layout element} to
+ *   determine which layout to use when interpreting the buffer
+ *   contents;
+ * * {@link module:Layout.bits|BitStructure}s that contain a sequence
+ *   of individual {@link
+ *   module:Layout~BitStructure#addField|BitField}s packed into an 8,
+ *   16, 24, or 32-bit unsigned integer starting at the least- or
+ *   most-significant bit;
+ * * {@link module:Layout.cstr|C strings} of varying length;
+ * * {@link module:Layout.blob|Blobs} of fixed- or variable-{@link
+ *   module:Layout~Blob#length|length} raw data.
+ *
+ * All {@link module:Layout~Layout|Layout} instances are immutable
+ * after construction, to prevent internal state from becoming
+ * inconsistent.
+ *
+ * @local Layout
+ * @local ExternalLayout
+ * @local GreedyCount
+ * @local OffsetLayout
+ * @local UInt
+ * @local UIntBE
+ * @local Int
+ * @local IntBE
+ * @local NearUInt64
+ * @local NearUInt64BE
+ * @local NearInt64
+ * @local NearInt64BE
+ * @local Float
+ * @local FloatBE
+ * @local Double
+ * @local DoubleBE
+ * @local Sequence
+ * @local Structure
+ * @local UnionDiscriminator
+ * @local UnionLayoutDiscriminator
+ * @local Union
+ * @local VariantLayout
+ * @local BitStructure
+ * @local BitField
+ * @local Boolean
+ * @local Blob
+ * @local CString
+ * @local Constant
+ * @local bindConstructorLayout
+ * @module Layout
+ * @license MIT
+ * @author Peter A. Bigot
+ * @see {@link https://github.com/pabigot/buffer-layout|buffer-layout on GitHub}
+ */
+
+/**
+ * [js-sha3]{@link https://github.com/emn178/js-sha3}
+ *
+ * @version 0.8.0
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2015-2018
+ * @license MIT
+ */
+
+/** 
+         * @license
+         * ====================================================================
+         * Copyright (c) 2013 Youssef Beddad, youssef.beddad@gmail.com
+         *               2013 Eduardo Menezes de Morais, eduardo.morais@usp.br
+         *               2013 Lee Driscoll, https://github.com/lsdriscoll
+         *               2014 Juan Pablo Gaviria, https://github.com/juanpgaviria
+         *               2014 James Hall, james@parall.ax
+         *               2014 Diego Casorran, https://github.com/diegocr
+         *
+         * 
+         * ====================================================================
+         */
+
+/** @license
+           * MIT license.
+           * Copyright (c) 2012 Willow Systems Corporation, willow-systems.com
+           *               2014 Diego Casorran, https://github.com/diegocr
+           *
+           * 
+           * ====================================================================
+           */
+
+/** @license
+         * Copyright (c) 2012 Willow Systems Corporation, willow-systems.com
+         * 
+         * 
+         * ====================================================================
+         */
+
+/** @license
+         * jsPDF - PDF Document creation from JavaScript
+         * Version 1.5.3 Built on 2018-12-27T14:11:42.696Z
+         *                      CommitID d93d28db14
+         *
+         * Copyright (c) 2010-2016 James Hall <james@parall.ax>, https://github.com/MrRio/jsPDF
+         *               2010 Aaron Spike, https://github.com/acspike
+         *               2012 Willow Systems Corporation, willow-systems.com
+         *               2012 Pablo Hess, https://github.com/pablohess
+         *               2012 Florian Jenett, https://github.com/fjenett
+         *               2013 Warren Weckesser, https://github.com/warrenweckesser
+         *               2013 Youssef Beddad, https://github.com/lifof
+         *               2013 Lee Driscoll, https://github.com/lsdriscoll
+         *               2013 Stefan Slonevskiy, https://github.com/stefslon
+         *               2013 Jeremy Morel, https://github.com/jmorel
+         *               2013 Christoph Hartmann, https://github.com/chris-rock
+         *               2014 Juan Pablo Gaviria, https://github.com/juanpgaviria
+         *               2014 James Makes, https://github.com/dollaruw
+         *               2014 Diego Casorran, https://github.com/diegocr
+         *               2014 Steven Spungin, https://github.com/Flamenco
+         *               2014 Kenneth Glassey, https://github.com/Gavvers
+         *
+         * Licensed under the MIT License
+         *
+         * Contributor(s):
+         *    siefkenj, ahwolf, rickygu, Midnith, saintclair, eaparango,
+         *    kim3er, mfo, alnorth, Flamenco
+         */
+
+/** @license
+         * jsPDF addImage plugin
+         * Copyright (c) 2012 Jason Siefken, https://github.com/siefkenj/
+         *               2013 Chris Dowling, https://github.com/gingerchris
+         *               2013 Trinh Ho, https://github.com/ineedfat
+         *               2013 Edwin Alejandro Perez, https://github.com/eaparango
+         *               2013 Norah Smith, https://github.com/burnburnrocket
+         *               2014 Diego Casorran, https://github.com/diegocr
+         *               2014 James Robb, https://github.com/jamesbrobb
+         *
+         * 
+         */
+
+/** @license
+         jsPDF standard_fonts_metrics plugin
+         * Copyright (c) 2012 Willow Systems Corporation, willow-systems.com
+         * MIT license.
+         * 
+         * ====================================================================
+         */
+
+/** @license React v0.20.2
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.2
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.2
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.2
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+//! moment.js
